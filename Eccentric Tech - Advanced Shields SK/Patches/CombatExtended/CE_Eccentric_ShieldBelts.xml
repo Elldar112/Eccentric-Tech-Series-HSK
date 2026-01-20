@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <!-- ========== Phased shield belt ========== -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/statBases</xpath>
+          <value>
+            <Bulk>4</Bulk>
+            <WornBulk>2</WornBulk>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+          <value>
+            <EnergyShieldRechargeRate>0.420</EnergyShieldRechargeRate>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+          <value>
+            <EnergyShieldEnergyMax>2.20</EnergyShieldEnergyMax>
+          </value>
+        </li>
+
+        <!-- ========== Modulated shield belt ========== -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/statBases</xpath>
+          <value>
+            <Bulk>5</Bulk>
+            <WornBulk>2.5</WornBulk>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+          <value>
+            <EnergyShieldRechargeRate>0.260</EnergyShieldRechargeRate>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+          <value>
+            <EnergyShieldEnergyMax>2.60</EnergyShieldEnergyMax>
+          </value>
+        </li>
+
+        <!-- ========== Layered shield belt ========== -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/statBases</xpath>
+          <value>
+            <Bulk>5</Bulk>
+            <WornBulk>2.5</WornBulk>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+          <value>
+            <EnergyShieldRechargeRate>0.180</EnergyShieldRechargeRate>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+          <value>
+            <EnergyShieldEnergyMax>4.60</EnergyShieldEnergyMax>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+
+  </Operation>
+</Patch>

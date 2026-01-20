@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Phased shield belt -->
+  <ThingDef ParentName="PhasedShieldBeltBase">
+    <defName>Eccentric_PhasedShieldBelt</defName>
+    <label>phased shield belt</label>
+    <description>An advanced shield belt used by The Eccentric's staff, phased shield belts have greatly increased capacity and rapid reset capabilities, but cannot recharge while actively under strain.\n\nThis offers more immediate protection against enemy attacks within a short period of time, allowing its user to take cover or retreat to safety.</description>
+    <graphicData>
+      <texPath>Things/Eccentric/Apparel/Belts/PhasedShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <Mass>3</Mass>
+      <EnergyShieldRechargeRate>0.20</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.50</EnergyShieldEnergyMax>
+      <EnergyShieldActiveRechargeDelay>3.0</EnergyShieldActiveRechargeDelay>
+      <EnergyShieldInactiveRechargeDelay>5.0</EnergyShieldInactiveRechargeDelay>
+    </statBases>
+    <costList>
+      <Plasteel>40</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Eccentric_HexCell>1</Eccentric_HexCell>
+    </costList>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>RGBA(0.6392,0.8078,0.9373,1)</color>
+    </colorGenerator>
+  </ThingDef>
+
+  <!-- Modulated (ranged) shield belt -->
+  <ThingDef ParentName="ModulatedShieldBeltBase">
+    <defName>Eccentric_ModulatedShieldBelt</defName>
+    <label>modulated shield belt</label>
+    <description>This advanced shield belt uses precisely modulated field generators that synchronize with its user's weapons fire, allowing ranged weapons to be used while it is worn and active.\n\nIt is somewhat heavier than a standard phased shield belt, has lower overall shield strength, and charges more slowly.</description>
+    <graphicData>
+      <texPath>Things/Eccentric/Apparel/Belts/ModulatedShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <Mass>4</Mass>
+      <EnergyShieldRechargeRate>0.15</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.40</EnergyShieldEnergyMax>
+      <EnergyShieldActiveRechargeDelay>4.0</EnergyShieldActiveRechargeDelay>
+      <EnergyShieldInactiveRechargeDelay>6.0</EnergyShieldInactiveRechargeDelay>
+    </statBases>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Eccentric_HexCell>2</Eccentric_HexCell>
+    </costList>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>RGBA(0.6784,0.9490,0.7412,1)</color>
+    </colorGenerator>
+    <recipeMaker>
+      <researchPrerequisite>Eccentric_ModulatedShields</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Layered shield belt -->
+  <ThingDef ParentName="LayeredShieldBeltBase">
+    <defName>Eccentric_LayeredShieldBelt</defName>
+    <label>layered shield belt</label>
+    <description>Also known as a "shatter shield", this advanced shield belt uses a specialized field generator that projects layers of strong but brittle barriers. Upon being hit by a powerful attack, an individual layer will ablate and deflect the energy of the strike, limiting the amount of energy the shield can lose from a single blow.\n\nIt is somewhat heavier than a standard phased shield belt, has lower overall shield strength, and charges more slowly.</description>
+    <graphicData>
+      <texPath>Things/Eccentric/Apparel/Belts/LayeredShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <statBases>
+      <Mass>4</Mass>
+      <WorkToMake>25000</WorkToMake>
+      <Flammability>0.4</Flammability>
+      <EnergyShieldRechargeRate>0.15</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.40</EnergyShieldEnergyMax>
+      <EnergyShieldMaxEnergyLoss>0.10</EnergyShieldMaxEnergyLoss>
+      <EnergyShieldActiveRechargeDelay>3.0</EnergyShieldActiveRechargeDelay>
+      <EnergyShieldInactiveRechargeDelay>5.0</EnergyShieldInactiveRechargeDelay>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Eccentric_HexCell>2</Eccentric_HexCell>
+    </costList>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>RGBA(0.9373,0.8706,0.6392,1)</color>
+    </colorGenerator>
+    <recipeMaker>
+      <researchPrerequisite>Eccentric_LayeredShields</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

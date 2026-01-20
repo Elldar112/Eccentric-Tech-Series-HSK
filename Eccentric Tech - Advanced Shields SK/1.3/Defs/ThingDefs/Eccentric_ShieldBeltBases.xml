@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Base shield belt -->
+  <ThingDef Name="EccentricShieldBeltBase" ParentName="ApparelBase" Abstract="True">
+    <thingClass>EccentricShieldBelts.RangedShieldBelt</thingClass>
+    <tickerType>Normal</tickerType>
+
+    <tradeability>Sellable</tradeability>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>EccentricApparelUtility</li>
+    </thingCategories>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>EccentricNanoassembler</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <researchPrerequisite>Eccentric_PhasedShields</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <generateCommonality>0</generateCommonality>
+  </ThingDef>
+
+  <!-- Phased shield belt -->
+  <ThingDef Name="PhasedShieldBeltBase" ParentName="EccentricShieldBeltBase" Abstract="True">
+    <modExtensions>
+      <li Class="EccentricShieldBelts.ModExtension_ShieldConfig">
+        <bubbleMaterialPath>Other/Eccentric/PhasedBubble</bubbleMaterialPath>
+        <impactMaterialPath>Other/Eccentric/PulseBubbleDirectional</impactMaterialPath>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Modulated (ranged) shield belt -->
+  <ThingDef Name="ModulatedShieldBeltBase" ParentName="EccentricShieldBeltBase" Abstract="True">
+    <modExtensions>
+      <li Class="EccentricShieldBelts.ModExtension_ShieldConfig">
+        <bubbleMaterialPath>Other/Eccentric/ModulatedBubble</bubbleMaterialPath>
+        <impactMaterialPath>Other/Eccentric/PulseBubbleDirectional</impactMaterialPath>
+        <allowRangedAttacks>true</allowRangedAttacks>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Layered shield belt -->
+  <ThingDef Name="LayeredShieldBeltBase" ParentName="EccentricShieldBeltBase" Abstract="True">
+    <modExtensions>
+      <li Class="EccentricShieldBelts.ModExtension_ShieldConfig">
+        <bubbleMaterialPath>Other/Eccentric/LayeredBubble</bubbleMaterialPath>
+        <impactMaterialPath>Other/Eccentric/PulseBubbleDirectional</impactMaterialPath>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

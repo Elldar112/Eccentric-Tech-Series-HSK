@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Defs>
+  <StatDef>
+    <defName>EnergyShieldMaxEnergyLoss</defName>
+    <label>Shield max energy loss</label>
+    <description>The maximum amount of energy a shield can lose from a single hit.</description>
+    <category>Apparel</category>
+    <minValue>0</minValue>
+    <defaultBaseValue>999.0</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>65</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>EnergyShieldActiveRechargeDelay</defName>
+    <label>Shield active recharge delay</label>
+    <description>The amount of time it takes before the shield starts recharging after it has taken damage, but is still active.</description>
+    <category>Apparel</category>
+    <minValue>0</minValue>
+    <toStringStyle>FloatMaxOne</toStringStyle>
+    <formatString>{0} s</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>64</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>EnergyShieldInactiveRechargeDelay</defName>
+    <label>Shield inactive recharge delay</label>
+    <description>The amount of time it takes before the shield starts recharging after breaking. This timer resets if the wearer continues to take damage.</description>
+    <category>Apparel</category>
+    <minValue>0</minValue>
+    <toStringStyle>FloatMaxOne</toStringStyle>
+    <formatString>{0} s</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>63</displayPriorityInCategory>
+  </StatDef>
+
+</Defs>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Research -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_ModulatedShields"
+		or defName="Eccentric_PhasedShields"
+		or defName="Eccentric_LayeredShields"]
+		/techLevel</xpath>
+		<value>
+		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_ModulatedShields"
+		or defName="Eccentric_PhasedShields"
+		or defName="Eccentric_LayeredShields"]
+		/requiredResearchFacilities</xpath>
+		<value>
+		  <requiredResearchFacilities>
+		  <li>MultiAnalyzer</li>
+		  <li>LabStation</li>
+		  <li>EccentricAuroraCore</li>
+		  </requiredResearchFacilities>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_ModulatedShields"
+		or defName="Eccentric_LayeredShields"]
+		/prerequisites</xpath>
+		<value>
+		  <prerequisites>
+			<li>Eccentric_HighDensityHex</li>
+			<li>ShieldBelt</li>
+		  </prerequisites>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_ModulatedShields"
+		or defName="Eccentric_PhasedShields"
+		or defName="Eccentric_LayeredShields"]
+		/baseCost</xpath>
+		<value>
+		  <baseCost>2500</baseCost>
+		</value>
+	</Operation>
+	
+<!-- Items -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+		  <recipeUsers>
+			<li>TableElectronics</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/recipeMaker/skillRequirements</xpath>
+		<value>
+		  <skillRequirements>
+			<Crafting>16</Crafting>
+		  </skillRequirements>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/techLevel</xpath>
+		<value>
+		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+	
+<!-- Phased Belt -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+		<value>
+			<EnergyShieldEnergyMax>2.20</EnergyShieldEnergyMax>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+        <value>
+            <EnergyShieldRechargeRate>0.420</EnergyShieldRechargeRate>
+        </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]/costList</xpath>
+		<value>
+		<costList>
+			<Eccentric_Nanoweave>25</Eccentric_Nanoweave>
+			<CarbonAlloy>15</CarbonAlloy>
+			<ComponentUltra>2</ComponentUltra>
+			<Electronics>3</Electronics>
+			<Microchips>1</Microchips>
+			<Eccentric_HexCell>1</Eccentric_HexCell>
+		</costList>
+		</value>
+	</Operation>
+	
+<!-- Modulated Belt -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+		<value>
+			<EnergyShieldEnergyMax>2.60</EnergyShieldEnergyMax>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+        <value>
+            <EnergyShieldRechargeRate>0.260</EnergyShieldRechargeRate>
+        </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ModulatedShieldBelt"]/costList</xpath>
+		<value>
+		<costList>
+			<Eccentric_Nanoweave>25</Eccentric_Nanoweave>
+			<CarbonAlloy>15</CarbonAlloy>
+			<ComponentUltra>2</ComponentUltra>
+			<Electronics>2</Electronics>
+			<Microchips>1</Microchips>
+			<Eccentric_HexCell>2</Eccentric_HexCell>
+		</costList>
+		</value>
+	</Operation>
+	
+<!-- Layered Belt --> 
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/statBases/EnergyShieldEnergyMax</xpath>
+		<value>
+			<EnergyShieldEnergyMax>4.60</EnergyShieldEnergyMax>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/statBases/EnergyShieldRechargeRate</xpath>
+        <value>
+            <EnergyShieldRechargeRate>0.180</EnergyShieldRechargeRate>
+        </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt"]/costList</xpath>
+		<value>
+		<costList>
+			<Eccentric_Nanoweave>25</Eccentric_Nanoweave>
+			<CarbonAlloy>15</CarbonAlloy>
+			<ComponentUltra>2</ComponentUltra>
+			<Electronics>2</Electronics>
+			<Microchips>1</Microchips>
+			<Eccentric_HexCell>3</Eccentric_HexCell>
+		</costList>	
+		</value>
+	</Operation>
+	
+</Patch>

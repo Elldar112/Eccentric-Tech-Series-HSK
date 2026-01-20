@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Apparel -->
+  <ThingCategoryDef>
+    <defName>EccentricApparel</defName>
+    <label>Eccentric</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <!-- Gear subcategory -->
+  <ThingCategoryDef>
+    <defName>EccentricApparelUtility</defName>
+    <label>Utility</label>
+    <parent>EccentricApparel</parent>
+  </ThingCategoryDef>
+</Defs>
