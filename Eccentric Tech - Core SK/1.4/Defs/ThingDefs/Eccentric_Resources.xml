@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Nanoweave -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Eccentric_Nanoweave</defName>
+    <label>nanoweave</label>
+    <description>Produced at a Nanofabricator, this highly advanced fabric is laced with precisely woven synthetic fibers and nano-scale muscle fiber. On its own it is not particularly noteworthy, but when assembled alongside specialized controllers, it becomes an incredibly strong and versatile smart material.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Materials/Nanoweave</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>9</MarketValue>
+      <Mass>0.038</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.22</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.38</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.08</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0</commonality>
+      <color>(160,161,164)</color>
+      <statFactors>
+        <Flammability>0.4</Flammability>
+        <MaxHitPoints>1.5</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+  <!-- Nanoweave crafting recipe -->
+  <RecipeDef>
+    <defName>Eccentric_MakeNanoweave</defName>
+    <label>make nanoweave (x20)</label>
+    <description>Make nanoweave fabric.</description>
+    <jobString>Making nanoweave fabric.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>2000</workAmount>
+    <recipeUsers>
+      <li>EccentricNanofabricator</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Chemfuel</li>
+        <li>Plasteel</li>
+        <li>Silver</li>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Eccentric_Nanoweave>20</Eccentric_Nanoweave>
+    </products>
+    <researchPrerequisite>Eccentric_NanoFabrication</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <!-- High-Density Hex-Cell -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Eccentric_HexCell</defName>
+    <label>high-density hex-cell</label>
+    <description>A miniaturized hex-cell capacitor that is capable of extremely high-density energy storage while remaining remarkably stable. It is used in the construction of Second Wave tech such as advanced power tools, smart apparel, and high-tech weapons.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Materials/HexCell</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <Mass>0.8</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+  <!-- High-density hex-cell crafting recipe -->
+  <RecipeDef>
+    <defName>Eccentric_MakeHexCell</defName>
+    <label>make high-density hex-cell</label>
+    <description>Make high-density hex-cell.</description>
+    <jobString>Making high-density hex-cell.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>1500</workAmount>
+    <recipeUsers>
+      <li>EccentricNanofabricator</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentIndustrial</li>
+        <li>Plasteel</li>
+        <li>Silver</li>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Eccentric_HexCell>1</Eccentric_HexCell>
+    </products>
+    <researchPrerequisite>Eccentric_HighDensityHex</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+</Defs>

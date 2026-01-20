@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>Eccentric_Tech</defName>
+    <label>Eccentric Tech</label>
+    <generalTitle>Eccentric Tech research</generalTitle>
+    <generalDescription>Unlock the advanced technology of The Eccentric.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_Core</defName>
+    <label>aurora core</label>
+    <description>Build a housing for Aurora's persona core, which will enable the decryption of her tech database.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1.4</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_NanoFabrication</defName>
+    <label>nanofabrication</label>
+    <description>Build fabricators capable of manufacturing and assembling nano-scale smart materials and components.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+      <li>Eccentric_Core</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+      <li>EccentricAuroraCore</li>
+    </requiredResearchFacilities>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1.4</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_HighDensityHex</defName>
+    <label>high-density hex-cells</label>
+    <description>Produce high-density, high-energy micro-capacitors capable of powering advanced electrothermal ignition weapons and nanoweave smart apparel.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Eccentric_NanoFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+      <li>EccentricAuroraCore</li>
+    </requiredResearchFacilities>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1.4</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+</Defs>

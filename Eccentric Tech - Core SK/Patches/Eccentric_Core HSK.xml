@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Research -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_Core"
+		or defName="Eccentric_NanoFabrication"
+		or defName="Eccentric_HighDensityHex"]
+		/techLevel</xpath>
+		<value>
+		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_NanoFabrication"
+		or defName="Eccentric_HighDensityHex"]
+		/requiredResearchFacilities</xpath>
+		<value>
+		  <requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>LabStation</li>
+			<li>EccentricAuroraCore</li>
+		  </requiredResearchFacilities>
+		</value>
+	</Operation>	
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_Core"]/requiredResearchFacilities</xpath>
+		<value>
+		  <requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>LabStation</li>
+		  </requiredResearchFacilities>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_Core"]</xpath>
+		<value>
+		  <prerequisites>
+			<li>Components_D3</li>
+			<li>Research_table_D2</li>
+		  </prerequisites>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_HighDensityHex" or defName="Eccentric_NanoFabrication"]/baseCost</xpath>
+		<value>
+		  <baseCost>1800</baseCost>
+		</value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_Core"]/baseCost</xpath>
+		<value>
+		  <baseCost>2200</baseCost>
+		</value>
+	</Operation> 
+
+<!-- Items -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHexCell" or defName="Eccentric_MakeNanoweave"]/recipeUsers</xpath>
+		<value>
+		  <recipeUsers>
+			<li>RobAssem</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeNanoweave"]/ingredients</xpath>
+		<value>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Synthread</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Hyperweave</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Carbon</li>
+			  </thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>SyntheticFibers</li>
+			  </thingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		</ingredients>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeNanoweave"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+			  <thingDefs>
+				<li>Synthread</li>
+				<li>Hyperweave</li>
+				<li>Carbon</li>
+				<li>SyntheticFibers</li>
+			  </thingDefs>
+			</fixedIngredientFilter>
+		</value>	
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHexCell"]/ingredients</xpath>
+		<value>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Hexcell</li>
+			  </thingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MagneticMaterial</li>
+			  </thingDefs>
+			</filter>
+			<count>2</count>
+		  </li>
+		  <li>
+			<filter>
+				<categories>
+					<li>HCMBar</li>
+				</categories>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ElectronicComponents</li>
+			  </thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>	
+		</ingredients>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHexCell"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+			  <thingDefs>
+				<li>Hexcell</li>
+				<li>MagneticMaterial</li>
+				<li>ElectronicComponents</li>
+			  </thingDefs>
+			<categories>
+				<li>HCMBar</li>
+			</categories>
+			</fixedIngredientFilter>
+		</value>	
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_Nanoweave"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>80</MarketValue>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_HexCell"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>720</MarketValue>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_Nanoweave" or defName="Eccentric_HexCell"]/techLevel</xpath>
+		<value>
+			<techLevel>Ultra</techLevel>
+		</value>	
+	</Operation>
+	
+	
+<!-- Buildings -->
+		
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="EccentricNanofabricator" or defName="EccentricNanoassembler"]/designationCategory</xpath>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="EccentricNanofabricator" or defName="EccentricNanoassembler"]/researchPrerequisites</xpath>
+	</Operation>
+
+</Patch>

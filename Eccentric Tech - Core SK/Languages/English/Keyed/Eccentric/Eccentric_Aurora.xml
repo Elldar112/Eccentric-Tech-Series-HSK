@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricCore_AutomatedLaunch>Automated Ship Launch</EccentricCore_AutomatedLaunch>
+  <EccentricCore_AutomatedLaunchDesc>Orders Aurora to begin an automated ship launch. Aurora's specialised pilot routines are capable of operating simple gravships with no chance of mishaps.</EccentricCore_AutomatedLaunchDesc>
+  <EccentricCore_AutomatedLaunchNoConsole>Cannot launch: no operational pilot console detected.</EccentricCore_AutomatedLaunchNoConsole>
+  <EccentricCore_AutomatedLaunchRejected>Cannot launch: {0}</EccentricCore_AutomatedLaunchRejected>
+
+</LanguageData>

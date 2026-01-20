@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>EccentricTech_Core</identifier>
+  <version>1.5.1.0</version>
+  <suggests>
+    <li>EccentricTech_AngelApparel</li>
+    <li>EccentricTech_AdvancedShields</li>
+    <li>EccentricTech_CosmeticGeneticModifications2</li>
+    <li>EccentricTech_Flares2</li>
+    <li>EccentricTech_FoxysArmory2</li>
+    <li>EccentricTech_FusionPower</li>
+    <li>ARimReborn_Core</li>
+    <li>Aelanna_HeruanRace</li>
+    <li>CleaningSpeed</li>
+    <li>WeaponRacks</li>
+  </suggests>
+  <showCrossPromotions>true</showCrossPromotions>
+</Manifest>
