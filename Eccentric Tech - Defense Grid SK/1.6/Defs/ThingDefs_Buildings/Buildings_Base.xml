@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Eccentric_DefenseGridBuildingBase" ParentName="BuildingBase" Abstract="True">
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-5</Beauty>
+    </statBases>
+    <tickerType>Never</tickerType>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>1.0</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <building>
+      <relatedBuildCommands>
+        <li>Eccentric_DefenseConduit</li>
+        <li>Eccentric_DefenseConduitUnderground</li>
+      </relatedBuildCommands>
+    </building>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseConduit</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>

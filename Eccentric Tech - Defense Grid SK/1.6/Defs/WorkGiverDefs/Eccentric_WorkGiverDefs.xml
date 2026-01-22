@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Reload launchers -->
+  <WorkGiverDef>
+    <defName>EccentricDefenseGrid_ReloadMissileLaunchers</defName>
+    <label>load targetB into targetA</label>
+    <giverClass>EccentricDefenseGrid.WorkGiver_LoadOrdnance</giverClass>
+    <workType>Hauling</workType>
+    <verb>load</verb>
+    <gerund>loading</gerund>
+    <priorityInType>145</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <!-- Unload launchers -->
+  <WorkGiverDef>
+    <defName>EccentricDefenseGrid_UnloadMissileLaunchers</defName>
+    <label>unloading ordnance from targetA</label>
+    <giverClass>EccentricDefenseGrid.WorkGiver_UnloadOrdnance</giverClass>
+    <workType>Hauling</workType>
+    <verb>unload</verb>
+    <gerund>unloading</gerund>
+    <priorityInType>144</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>

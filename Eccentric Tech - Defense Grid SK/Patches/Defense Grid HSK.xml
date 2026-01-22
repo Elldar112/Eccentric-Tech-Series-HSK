@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Research -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_DefenseGridNetwork"
+		or defName="Eccentric_DefenseGridTurrets"
+		or defName="Eccentric_DefenseGridArtillery"
+		or defName="Eccentric_DefenseGridDesignators"
+		or defName="Eccentric_DefenseGridShields"
+		or defName="Eccentric_DefenseGridShieldFabrication"]
+		/techLevel</xpath>
+		<value>
+		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef
+		[defName="Eccentric_DefenseGridNetwork"
+		or defName="Eccentric_DefenseGridTurrets"
+		or defName="Eccentric_DefenseGridArtillery"
+		or defName="Eccentric_DefenseGridDesignators"
+		or defName="Eccentric_DefenseGridShields"
+		or defName="Eccentric_DefenseGridShieldFabrication"]
+		/requiredResearchFacilities</xpath>
+		<value>
+		  <requiredResearchFacilities>
+		  <li>MultiAnalyzer</li>
+		  <li>LabStation</li>
+		  <li>EccentricAuroraCore</li>
+		  </requiredResearchFacilities>
+		</value>
+	</Operation>
+  
+  	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridArtillery" or defName="Eccentric_DefenseGridShields"]/baseCost</xpath>
+		<value>
+		  <baseCost>3500</baseCost>
+		</value>
+	</Operation>
+	
+  	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridShieldFabrication" or defName="Eccentric_DefenseGridDesignators"]/baseCost</xpath>
+		<value>
+		  <baseCost>1800</baseCost>
+		</value>
+	</Operation>
+	
+<!-- Items -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="EccentricDefenseGrid_BaseMakeableOrdnance" or defName="Eccentric_ArtilleryDesignator"]/recipeMaker/recipeUsers</xpath>
+		<value>
+		  <recipeUsers>
+			<li>TableRimatomicsMachining</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHighEnergyShieldCore"]/recipeUsers</xpath>
+		<value>
+		  <recipeUsers>
+			<li>RobAssem</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHighEnergyShieldCore"]/ingredients</xpath>
+		<value>
+			<ingredients>
+			  <li>
+				<filter>
+				  <thingDefs>
+					<li>Eccentric_HexCell</li>
+				  </thingDefs>
+				</filter>
+				<count>8</count>
+			  </li>
+			  <li>
+				<filter>
+				  <thingDefs>
+					<li>ComponentUltra</li>
+				  </thingDefs>
+				</filter>
+				<count>2</count>
+			  </li>
+			  <li>
+				<filter>
+				  <thingDefs>
+					<li>AlnicoAlloy</li>
+				  </thingDefs>
+				</filter>
+				<count>60</count>
+			  </li>
+			  <li>
+			  	<filter>
+				  <thingDefs>
+					<li>Microchips</li>
+				  </thingDefs>
+				</filter>
+				<count>4</count>
+			  </li>
+			  <li>
+				<filter>
+				  <thingDefs>
+					<li MayRequire="Ludeon.RimWorld.Royalty">BroadshieldCore</li>
+				  </thingDefs>
+				</filter>
+				<count>1</count>
+			  </li>
+			</ingredients>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHighEnergyShieldCore"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+			  <thingDefs>
+				<li>Eccentric_HexCell</li>
+				<li>ComponentUltra</li>
+				<li>AlnicoAlloy</li>
+				<li>Microchips</li>
+				<li>BroadshieldCore</li>
+			  </thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryDesignator"]/costList</xpath>
+		<value>
+			<costList>
+			  <ReinforcedGlass>5</ReinforcedGlass>
+			  <Microchips>1</Microchips>
+			  <ComponentSpacer>2</ComponentSpacer>
+			  <Plastic>10</Plastic>
+			</costList>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryDesignator"]</xpath>
+		<value>
+		<statBases>
+			<WorkToMake>1500</WorkToMake>
+		</statBases>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="Eccentric_MakeHighEnergyShieldCore"]/skillRequirements</xpath>
+		<value>
+		<skillRequirements>
+			<Crafting>16</Crafting>
+		</skillRequirements>
+		</value>	
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryDesignator"]/recipeMaker/skillRequirements</xpath>
+		<value>
+		<skillRequirements>
+			<Crafting>16</Crafting>
+		</skillRequirements>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_HighEnergyShieldCore"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>35000</MarketValue>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/ThingDef[defName="BroadshieldCore"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>2500</MarketValue>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryDesignator"]</xpath>
+		<value>
+			<statBases>
+			<MarketValue>350</MarketValue>
+			</statBases>
+		</value>	
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_HighEnergyShieldCore" or defName="Eccentric_ArtilleryDesignator"]/techLevel</xpath>
+		<value>
+			<techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+		<xpath>Defs/ThingDef[defName="Apparel_PackBroadshield"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HexCell>2</Eccentric_HexCell>
+				<Electronics>4</Electronics>
+				<Hexcell>6</Hexcell>
+				<ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+		</value>
+	</Operation>
+	
+<!-- Buildings -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseConduit"]/costList</xpath>
+		<value>
+			<costList>
+				<Wire>4</Wire>
+				<Eccentric_Nanoweave>2</Eccentric_Nanoweave>
+				<MagneticMaterial>1</MagneticMaterial>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseConduitUnderground"]/costList</xpath>
+		<value>
+			<costList>
+				<ConcreteResource>2</ConcreteResource>
+			</costList>
+		</value>
+	</Operation>
+	
+</Patch>

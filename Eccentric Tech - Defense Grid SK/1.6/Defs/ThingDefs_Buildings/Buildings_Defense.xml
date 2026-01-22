@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Shield generator -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldGenerator</defName>
+    <label>shield generator</label>
+    <description>A military-grade centralized shield generator unit designed to work with linked projectors.\n\nThis device cannot intercept projectiles on its own, but must be connected to shield projectors and shield capacitors via a defense grid network. Intercepting projectiles will also generate a large amount of heat, which must be dissipated in heatsinks.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldGenerator_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <shadowData>
+        <volume>(2.93,1,2.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(3,3)</size>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>100</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(159,248,255,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>800</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseGenerator">
+        <maxEnergyDrain>50</maxEnergyDrain>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_GeneratorOverlay" />
+    </comps>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Shield projector (interceptor source) -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldProjector</defName>
+    <label>shield projector</label>
+    <description>A shield projector designed to be linked together to provide protection for a wide area.\n\nShield projectors do not need to be directly powered, but must be connected to a defense grid network with an active shield generator and shield capacitors to function. Intercepting incoming projectiles will also generate a great deal of heat which must be dissipated in heatsinks.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldProjector_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/ShieldProjector_UI</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>20</Plasteel>
+      <Gold>1</Gold>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(159,248,255,0)</glowColor>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseProjector">
+        <radius>20.9</radius>
+        <radiusRange>8~20</radiusRange>
+        <adjustableRadius>true</adjustableRadius>
+        <interceptsDirectProjectiles>true</interceptsDirectProjectiles>
+        <interceptsOverheadProjectiles>true</interceptsOverheadProjectiles>
+        <interceptsExplosiveProjectiles>true</interceptsExplosiveProjectiles>
+        <interceptsNonExplosiveProjectiles>true</interceptsNonExplosiveProjectiles>
+
+        <fieldTexturePath>Eccentric/Effects/ShieldBubbleWhite-512x512</fieldTexturePath>
+        <fieldShader>TransparentPostLight</fieldShader>
+        <fieldDrawSizeFactor>1.015873</fieldDrawSizeFactor>
+        <defaultColor>(159,248,255,38)</defaultColor>
+
+        <startupSound>Eccentric_DefenseGridShieldStartup</startupSound>
+        <interceptSound>Eccentric_DefenseGridShieldHit</interceptSound>
+        <shutdownSound>Eccentric_DefenseGridShieldBreak</shutdownSound>
+        <startupEffects>
+          <li>Eccentric_ShieldBubbleStartPulse</li>
+          <li>Eccentric_ShieldBubbleStartRing</li>
+        </startupEffects>
+        <shutdownEffects>
+          <li>Eccentric_ShieldBubble_BreakPulse</li>
+          <li>Eccentric_ShieldBubble_BreakDrifters</li>
+        </shutdownEffects>
+        <interceptEffectDrawOffset>(0,0,0.3)</interceptEffectDrawOffset>
+        <interceptEffectRotatedDrawOffset>(0,0,0.7)</interceptEffectRotatedDrawOffset>
+        <interceptEffects>
+          <li>Eccentric_ShieldInterceptFlashBase</li>
+          <li>Eccentric_ShieldInterceptFlashCore</li>
+          <li>Eccentric_ShieldInterceptTrailBase</li>
+          <li>Eccentric_ShieldInterceptTrailCore</li>
+          <li>Eccentric_ShieldInterceptPulseBase</li>
+          <li>Eccentric_ShieldInterceptPulseCore</li>
+        </interceptEffects>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_ProjectorOverlay">
+        <baseRingPath>Eccentric/Things/Buildings/ShieldProjector_Ring</baseRingPath>
+        <activeRingPath>Eccentric/Things/Buildings/ShieldProjector_RingWhite</activeRingPath>
+        <activeRingGlowPath>Eccentric/Things/Buildings/ShieldProjector_RingGlow</activeRingGlowPath>
+        <glowRingPath>Eccentric/Things/Buildings/ShieldProjector_Glow</glowRingPath>
+        <casingPath>Eccentric/Things/Buildings/ShieldProjector_Shell</casingPath>
+        <pylonPath>Eccentric/Things/Buildings/ShieldProjector_Pylon</pylonPath>
+        <overlayDrawOffset>(0,0,0.3)</overlayDrawOffset>
+        <overlayDrawSize>(2,0,2)</overlayDrawSize>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseProjector</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Shield projector (wide) -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldProjectorWide</defName>
+    <label>shield projector (wide-area)</label>
+    <description>A shield projector designed to be linked together to provide protection for a wide area.\n\nShield projectors do not need to be directly powered, but must be connected to a defense grid network with an active shield generator and shield capacitors to function. Intercepting incoming projectiles will also generate a great deal of heat which must be dissipated in heatsinks.\n\nThis wide-area variant can cover a much larger area but requires its own shield core.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldProjectorWide_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/ShieldProjectorWide_UI</uiIconPath>
+    <uiIconScale>2.0</uiIconScale>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>2</Gold>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(159,248,255,0)</glowColor>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseProjector">
+        <radius>40.9</radius>
+        <radiusRange>20~40</radiusRange>
+        <adjustableRadius>true</adjustableRadius>
+        <interceptsDirectProjectiles>true</interceptsDirectProjectiles>
+        <interceptsOverheadProjectiles>true</interceptsOverheadProjectiles>
+        <interceptsExplosiveProjectiles>true</interceptsExplosiveProjectiles>
+        <interceptsNonExplosiveProjectiles>true</interceptsNonExplosiveProjectiles>
+
+        <fieldTexturePath>Eccentric/Effects/ShieldBubbleWhite-512x512</fieldTexturePath>
+        <fieldShader>TransparentPostLight</fieldShader>
+        <fieldDrawSizeFactor>1.015873</fieldDrawSizeFactor>
+        <defaultColor>(159,248,255,38)</defaultColor>
+
+        <startupSound>Eccentric_DefenseGridShieldStartup</startupSound>
+        <interceptSound>Eccentric_DefenseGridShieldHit</interceptSound>
+        <shutdownSound>Eccentric_DefenseGridShieldBreak</shutdownSound>
+        <startupEffects>
+          <li>Eccentric_ShieldBubbleStartPulse</li>
+          <li>Eccentric_ShieldBubbleStartRing</li>
+        </startupEffects>
+        <shutdownEffects>
+          <li>Eccentric_ShieldBubble_BreakPulse</li>
+          <li>Eccentric_ShieldBubble_BreakDrifters</li>
+        </shutdownEffects>
+        <interceptEffectDrawOffset>(0,0,0.3)</interceptEffectDrawOffset>
+        <interceptEffectRotatedDrawOffset>(0,0,1.2)</interceptEffectRotatedDrawOffset>
+        <interceptEffects>
+          <li>Eccentric_ShieldInterceptFlashBase</li>
+          <li>Eccentric_ShieldInterceptFlashCore</li>
+          <li>Eccentric_ShieldInterceptTrailBase</li>
+          <li>Eccentric_ShieldInterceptTrailCore</li>
+          <li>Eccentric_ShieldInterceptPulseBase</li>
+          <li>Eccentric_ShieldInterceptPulseCore</li>
+        </interceptEffects>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_ProjectorOverlay">
+        <baseRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Ring</baseRingPath>
+        <activeRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_RingWhite</activeRingPath>
+        <activeRingGlowPath>Eccentric/Things/Buildings/ShieldProjectorWide_RingGlow</activeRingGlowPath>
+        <glowRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Glow</glowRingPath>
+        <casingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Shell</casingPath>
+        <pylonPath>Eccentric/Things/Buildings/ShieldProjectorWide_Pylon</pylonPath>
+        <overlayDrawOffset>(0,0,0.3)</overlayDrawOffset>
+        <overlayDrawSize>(3,0,3)</overlayDrawSize>
+
+        <minRotationRate>0</minRotationRate>
+        <maxRotationRate>4</maxRotationRate>
+        <rotationAcceleration>0.03</rotationAcceleration>
+        <rotationDeceleration>0.01</rotationDeceleration>
+        <pylonMinRotationRate>0</pylonMinRotationRate>
+        <pylonMaxRotationRate>1.5</pylonMaxRotationRate>
+        <pylonAcceleration>0.015</pylonAcceleration>
+        <pylonDeceleration>0.003</pylonDeceleration>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseProjector</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Shield projector (3x3 wide) -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldProjector3x3Wide</defName>
+    <label>shield projector (3x3 wide-area)</label>
+    <description>A shield projector designed to be linked together to provide protection for a wide area.\n\nShield projectors do not need to be directly powered, but must be connected to a defense grid network with an active shield generator and shield capacitors to function. Intercepting incoming projectiles will also generate a great deal of heat which must be dissipated in heatsinks.\n\nThis wide-area variant can cover a much larger area but requires its own shield core.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldProjectorHuge_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <shadowData>
+        <volume>(2.93,1,2.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/ShieldProjectorHuge_UI</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(3,3)</size>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>2</Gold>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(159,248,255,0)</glowColor>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseProjector">
+        <radius>40.9</radius>
+        <radiusRange>20~40</radiusRange>
+        <adjustableRadius>true</adjustableRadius>
+        <interceptsDirectProjectiles>true</interceptsDirectProjectiles>
+        <interceptsOverheadProjectiles>true</interceptsOverheadProjectiles>
+        <interceptsExplosiveProjectiles>true</interceptsExplosiveProjectiles>
+        <interceptsNonExplosiveProjectiles>true</interceptsNonExplosiveProjectiles>
+
+        <fieldTexturePath>Eccentric/Effects/ShieldBubbleWhite-512x512</fieldTexturePath>
+        <fieldShader>TransparentPostLight</fieldShader>
+        <fieldDrawSizeFactor>1.015873</fieldDrawSizeFactor>
+        <defaultColor>(159,248,255,38)</defaultColor>
+
+        <startupSound>Eccentric_DefenseGridShieldStartup</startupSound>
+        <interceptSound>Eccentric_DefenseGridShieldHit</interceptSound>
+        <shutdownSound>Eccentric_DefenseGridShieldBreak</shutdownSound>
+        <startupEffects>
+          <li>Eccentric_ShieldBubbleStartPulse</li>
+          <li>Eccentric_ShieldBubbleStartRing</li>
+        </startupEffects>
+        <shutdownEffects>
+          <li>Eccentric_ShieldBubble_BreakPulse</li>
+          <li>Eccentric_ShieldBubble_BreakDrifters</li>
+        </shutdownEffects>
+        <interceptEffectDrawOffset>(0,0,0.3)</interceptEffectDrawOffset>
+        <interceptEffectRotatedDrawOffset>(0,0,1.2)</interceptEffectRotatedDrawOffset>
+        <interceptEffects>
+          <li>Eccentric_ShieldInterceptFlashBase</li>
+          <li>Eccentric_ShieldInterceptFlashCore</li>
+          <li>Eccentric_ShieldInterceptTrailBase</li>
+          <li>Eccentric_ShieldInterceptTrailCore</li>
+          <li>Eccentric_ShieldInterceptPulseBase</li>
+          <li>Eccentric_ShieldInterceptPulseCore</li>
+        </interceptEffects>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_ProjectorOverlay">
+        <baseRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Ring</baseRingPath>
+        <activeRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_RingWhite</activeRingPath>
+        <activeRingGlowPath>Eccentric/Things/Buildings/ShieldProjectorWide_RingGlow</activeRingGlowPath>
+        <glowRingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Glow</glowRingPath>
+        <casingPath>Eccentric/Things/Buildings/ShieldProjectorWide_Shell</casingPath>
+        <pylonPath>Eccentric/Things/Buildings/ShieldProjectorWide_Pylon</pylonPath>
+        <overlayDrawOffset>(0,0,0.3)</overlayDrawOffset>
+        <overlayDrawSize>(3,0,3)</overlayDrawSize>
+
+        <minRotationRate>0</minRotationRate>
+        <maxRotationRate>4</maxRotationRate>
+        <rotationAcceleration>0.03</rotationAcceleration>
+        <rotationDeceleration>0.01</rotationDeceleration>
+        <pylonMinRotationRate>0</pylonMinRotationRate>
+        <pylonMaxRotationRate>1.5</pylonMaxRotationRate>
+        <pylonAcceleration>0.015</pylonAcceleration>
+        <pylonDeceleration>0.003</pylonDeceleration>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseProjector</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Shield capacitor -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldCapacitor</defName>
+    <label>shield capacitor</label>
+    <description>A high-energy capacitor used to power networked shield generators.\n\nIt must be directly connected to power in order to charge and rapidly discharges if unpowered.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldCapacitor_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor">
+        <energyCapacity>1000</energyCapacity>
+        <energyGainPerHour>500</energyGainPerHour>
+        <energyDrainPerHour>2000</energyDrainPerHour>
+        <energyRechargeDelay>300</energyRechargeDelay>
+      </li>
+      <!--<li Class="EccentricDefenseGrid.CompProperties_CapacitorOverlay" />-->
+    </comps>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Shield heatsink -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_ShieldHeatsink</defName>
+    <label>shield heatsink</label>
+    <description>A high-capacity heatsink used to dissipate heat from networked shield generators.\n\nIt must be connected to a shield generator via defense grid conduits in order to receive heat.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShieldHeatsink_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseHeatsink">
+        <heatCapacity>5000</heatCapacity>
+        <heatDrainPerHour>250</heatDrainPerHour>
+        <overheatEffects>
+          <li>Eccentric_DefenseGridHeatDistortion</li>
+        </overheatEffects>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_HeatsinkOverlay">
+        <stage1OverlayPath>Eccentric/Things/Buildings/ShieldHeatsink_Glow1</stage1OverlayPath>
+        <stage2OverlayPath>Eccentric/Things/Buildings/ShieldHeatsink_Glow2</stage2OverlayPath>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Standalone shield generator (deployable) -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Eccentric_StandaloneShieldGenerator</defName>
+    <label>deployed shield generator</label>
+    <description>A compact shield generator that can stop incoming projectiles and explosives. It has limited internal power and shorts out after a while.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/PortableShieldGenerator_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Beauty>-5</Beauty>
+      <SellPriceFactor>0</SellPriceFactor>
+    </statBases>
+    <size>(1,1)</size>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <rotatable>false</rotatable>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(159,248,255,0)</glowColor>
+      </li>
+      <li Class="EccentricProjectiles.CompProperties_BurnoutBattery">
+        <startingEnergy>1000</startingEnergy>
+        <energyDrainPerHour>500</energyDrainPerHour>
+      </li>
+      <li Class="EccentricProjectiles.CompProperties_ProjectileInterceptor">
+        <radius>5.9</radius>
+        <interceptsDirectProjectiles>true</interceptsDirectProjectiles>
+        <interceptsOverheadProjectiles>true</interceptsOverheadProjectiles>
+        <interceptsExplosiveProjectiles>true</interceptsExplosiveProjectiles>
+        <interceptsNonExplosiveProjectiles>true</interceptsNonExplosiveProjectiles>
+        <requiresPower>true</requiresPower>
+        <maxPowerDrain>50</maxPowerDrain>
+
+        <fieldTexturePath>Eccentric/Effects/ShieldBubble-512x512</fieldTexturePath>
+        <fieldShader>TransparentPostLight</fieldShader>
+        <fieldDrawSizeFactor>1.015873</fieldDrawSizeFactor>
+
+        <startupSound>Eccentric_DefenseGridShieldStartup</startupSound>
+        <interceptSound>Eccentric_DefenseGridShieldHit</interceptSound>
+        <shutdownSound>Eccentric_DefenseGridShieldBreak</shutdownSound>
+        <startupEffects>
+          <li>Eccentric_ShieldBubbleStartPulse</li>
+          <li>Eccentric_ShieldBubbleStartRing</li>
+        </startupEffects>
+        <shutdownEffects>
+          <li>Eccentric_ShieldBubble_BreakPulse</li>
+          <li>Eccentric_ShieldBubble_BreakDrifters</li>
+        </shutdownEffects>
+        <interceptEffectDrawOffset>(0,0,0.1)</interceptEffectDrawOffset>
+        <interceptEffectRotatedDrawOffset>(0,0,0.4)</interceptEffectRotatedDrawOffset>
+        <interceptEffects>
+          <li>Eccentric_ShieldInterceptFlash</li>
+          <li>Eccentric_ShieldInterceptTrail</li>
+          <li>Eccentric_ShieldInterceptPulse</li>
+        </interceptEffects>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_StandaloneGeneratorOverlay" />
+    </comps>
+  </ThingDef>
+
+</Defs>

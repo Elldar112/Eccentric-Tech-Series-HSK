@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Charge Autocannon -->
+  <SoundDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_ChargeAutocannonShot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Shot_ChargeAutocannon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>45~50</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Railgun -->
+  <SoundDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_RailgunShot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Shot_ChargeRail</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50~55</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

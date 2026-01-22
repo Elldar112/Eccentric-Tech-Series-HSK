@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_CapacitorInspect>Shield Capacitor: {0}/{1} ({2}%)</EccentricDefenseGrid_CapacitorInspect>
+  <EccentricDefenseGrid_HeatsinkInspect>Heat: {0}/{1} ({2}%, {3})</EccentricDefenseGrid_HeatsinkInspect>
+
+  <EccentricDefenseGrid_GeneratorShutdown>{0} has shut down due to insufficient power!</EccentricDefenseGrid_GeneratorShutdown>
+  <EccentricDefenseGrid_GeneratorOverload>{0} has shut down due to thermal overload!</EccentricDefenseGrid_GeneratorOverload>
+
+  <EccentricDefenseGrid_PlaceConduitExists>Cannot place conduit here, a conduit or conduit blueprint already exists.</EccentricDefenseGrid_PlaceConduitExists>
+
+  <EccentricDefenseGrid_TurretNotConnected>Not connected to a turret</EccentricDefenseGrid_TurretNotConnected>
+  <EccentricDefenseGrid_TurretConnectedToUnmanned>Connected to: {0} (Unmanned)</EccentricDefenseGrid_TurretConnectedToUnmanned>
+  <EccentricDefenseGrid_TurretConnectedToManned>Connected to: {0} (Manned)</EccentricDefenseGrid_TurretConnectedToManned>
+
+  <EccentricDefenseGrid_DesignatorDeconstructConduit>Deconstruct Conduits</EccentricDefenseGrid_DesignatorDeconstructConduit>
+  <EccentricDefenseGrid_DesignatorDeconstructConduitDesc>Deconstruct defense network conduits and reclaim some of their resources.</EccentricDefenseGrid_DesignatorDeconstructConduitDesc>
+
+</LanguageData>

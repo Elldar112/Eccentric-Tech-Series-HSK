@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Eccentric Tech - Defense Grid</name>
+	<author>Aelanna</author>
+  <packageId>Aelanna.EccentricTech.DefenseGrid</packageId>
+  <description>Adds networked shield generators, laser-designated missile artillery batteries, and remote turret controllers for high-tech colony defense options.</description>
+  <modVersion>1.4.1</modVersion>
+  <supportedVersions>
+    <li>1.4</li>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Aelanna.EccentricTech.Core</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+</ModMetaData>

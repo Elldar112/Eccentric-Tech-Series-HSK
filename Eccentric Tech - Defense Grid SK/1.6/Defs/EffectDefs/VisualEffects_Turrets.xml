@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- M51 Charge Autocannon -->
+  <!-- Muzzle flashes -->
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_AutocannonFlash</defName>
+    <type>Muzzle</type>
+    <materialPath>Eccentric/Effects/Flash_ChargeAutocannon</materialPath>
+    <drawSize>(2,0,2)</drawSize>
+    <sizeRange>0.8~1.0</sizeRange>
+    <duration>12</duration>
+  </EccentricProjectiles.EffectDef>
+  <!-- Projectile trails -->
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_AutocannonTrail</defName>
+    <type>Trail</type>
+    <priority>Medium</priority>
+    <materialPath>Eccentric/Effects/Trail_White</materialPath>
+    <size>0.1</size>
+    <duration>15</duration>
+    <color>(159,248,255)</color>
+  </EccentricProjectiles.EffectDef>
+
+  <!-- M64 Railgun -->
+  <!-- Muzzle flashes -->
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_RailgunFlashPulse</defName>
+    <type>Particle</type>
+    <materialPath>Eccentric/Effects/Flash_Railgun_Pulse</materialPath>
+    <drawSize>(3,0,3)</drawSize>
+    <duration>24</duration>
+    <sizeRange>0.8~1.0</sizeRange>
+    <minSize>0.3</minSize>
+    <sizeFunction>Burst</sizeFunction>
+    <opacityFunction>Burst</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_RailgunFlashWave</defName>
+    <type>Particle</type>
+    <materialPath>Eccentric/Effects/Flash_Railgun_Wave</materialPath>
+    <drawSize>(4,0,4)</drawSize>
+    <sizeRange>0.8~1.0</sizeRange>
+    <duration>32</duration>
+    <minSize>0.3</minSize>
+    <sizeFunction>EaseOutSine</sizeFunction>
+    <opacityFunction>Burst</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <!-- Projectile trails -->
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_RailgunTrail</defName>
+    <type>Trail</type>
+    <priority>Medium</priority>
+    <materialPath>Eccentric/Effects/Trail_White</materialPath>
+    <minSize>0.04</minSize>
+    <size>0.16</size>
+    <sizeFunction>EaseOutQuad</sizeFunction>
+    <duration>32</duration>
+    <subtractParentElapsed>true</subtractParentElapsed>
+    <colorCurve>
+      <points>
+        <li><key>0.15</key><value>(159,248,255)</value></li>
+        <li><key>0.30</key><value>(20,55,120)</value></li>
+      </points>
+    </colorCurve>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>EccentricDefenseGrid_RailgunDistortionTrail</defName>
+    <type>Trail</type>
+    <priority>Medium</priority>
+    <materialPath>Eccentric/Effects/Trail_White</materialPath>
+    <shaderType>PsychicDistortionRibbon</shaderType>
+    <minSize>0.08</minSize>
+    <size>0.3</size>
+    <duration>60</duration>
+    <subtractParentElapsed>true</subtractParentElapsed>
+    <sizeFunction>EaseOutQuad</sizeFunction>
+  </EccentricProjectiles.EffectDef>
+
+</Defs>

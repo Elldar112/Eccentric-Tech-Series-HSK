@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_ShieldUnmanned>Can only be reconfigured when a defense network console is manned or a compatible AI is connected.</EccentricDefenseGrid_ShieldUnmanned>
+
+  <EccentricDefenseGrid_ShieldInterceptDirect>Intercept Direct Projectiles</EccentricDefenseGrid_ShieldInterceptDirect>
+  <EccentricDefenseGrid_ShieldInterceptDirectDesc>Intercept direct-fire projectiles such as arrows, bullets, grenades, and anti-tank rockets.</EccentricDefenseGrid_ShieldInterceptDirectDesc>
+  <EccentricDefenseGrid_ShieldInterceptOverhead>Intercept Overhead Projectiles</EccentricDefenseGrid_ShieldInterceptOverhead>
+  <EccentricDefenseGrid_ShieldInterceptOverheadDesc>Intercept indirect-fire projectiles such as mortar rounds, artillery shells, and artillery rockets.</EccentricDefenseGrid_ShieldInterceptOverheadDesc>
+  <EccentricDefenseGrid_ShieldInterceptExplosive>Intercept Explosive Projectiles</EccentricDefenseGrid_ShieldInterceptExplosive>
+  <EccentricDefenseGrid_ShieldInterceptExplosiveDesc>Intercept explosive projectiles such as grenades, rockets, and incendiary bolts.</EccentricDefenseGrid_ShieldInterceptExplosiveDesc>
+  <EccentricDefenseGrid_ShieldInterceptNonExplosive>Intercept Non-Explosive Projectiles</EccentricDefenseGrid_ShieldInterceptNonExplosive>
+  <EccentricDefenseGrid_ShieldInterceptNonExplosiveDesc>Intercept non-explosive projectiles such as arrows, bullets, fragmentation, and other kinetic rounds.</EccentricDefenseGrid_ShieldInterceptNonExplosiveDesc>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThreshold>Min Energy ({0}%)</EccentricDefenseGrid_ShieldInterceptEnergyThreshold>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThresholdDesc>Sets the minimum energy reserve this generator will intercept projectiles at. Below this threshold, this generator will allow projectiles through.</EccentricDefenseGrid_ShieldInterceptEnergyThresholdDesc>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThresholdLabel>Minimum energy: {0}%</EccentricDefenseGrid_ShieldInterceptEnergyThresholdLabel>
+
+  <EccentricDefenseGrid_ShieldRadiusLabel>Radius: {0}</EccentricDefenseGrid_ShieldRadiusLabel>
+  <EccentricDefenseGrid_ShieldRadiusDesc>Adjust the interception radius of this projector.</EccentricDefenseGrid_ShieldRadiusDesc>
+
+  <EccentricDefenseGrid_ShieldInterceptToggle>Click to enable or disable for all generators</EccentricDefenseGrid_ShieldInterceptToggle>
+
+</LanguageData>

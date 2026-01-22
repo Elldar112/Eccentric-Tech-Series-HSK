@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- High energy shield core (generator material) -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Eccentric_HighEnergyShieldCore</defName>
+    <label>high energy shield core</label>
+    <description>A critical component for wide-area defensive shields, high energy shield cores are required to construct networked shield generators such as those used in military-grade starships or high-tech colony defenses. These complex devices can only be fabricated by precision nano-scale production facilities, and thus are exceptionally rare on the rimworlds.\n\nHigh energy shield cores can be obtained by performing quests for friendly factions, in the hands of exotic goods traders, or manufactured at nanoassembler facilities. You can also salvage one by dismantling a gravship shield generator.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/ShieldCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.00</drawSize>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>1500</MarketValue>
+      <Mass>10.0</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+  <!-- High energy shield core recipe (Core only) -->
+  <RecipeDef MayRequire="Aelanna.EccentricTech.Core">
+    <defName>Eccentric_MakeHighEnergyShieldCore</defName>
+    <label>make high energy shield core</label>
+    <description>Make high energy shield core.</description>
+    <jobString>Making high energy shield core.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>10000</workAmount>
+    <recipeUsers>
+      <li>EccentricNanoassembler</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Eccentric_HexCell</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>60</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Eccentric_HexCell</li>
+        <li>ComponentSpacer</li>
+        <li>Plasteel</li>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+    </products>
+    <researchPrerequisite>Eccentric_DefenseGridShieldFabrication</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_LauncherDefaultName>Launcher {0}</EccentricDefenseGrid_LauncherDefaultName>
+
+  <EccentricDefenseGrid_LauncherRename>Rename</EccentricDefenseGrid_LauncherRename>
+  <EccentricDefenseGrid_LauncherRenameDesc>Set or change this launcher's label.</EccentricDefenseGrid_LauncherRenameDesc>
+  <EccentricDefenseGrid_LauncherRenamed>Launcher name set to {0}.</EccentricDefenseGrid_LauncherRenamed>
+
+  <EccentricDefenseGrid_OrdnanceTabName>Ordnance</EccentricDefenseGrid_OrdnanceTabName>
+  <EccentricDefenseGrid_OrdnanceTabSlot>Slot {0}</EccentricDefenseGrid_OrdnanceTabSlot>
+  <EccentricDefenseGrid_OrdnanceTabSlotEmpty>(Empty)</EccentricDefenseGrid_OrdnanceTabSlotEmpty>
+  <EccentricDefenseGrid_OrdnanceTabAllSlots>All Slots</EccentricDefenseGrid_OrdnanceTabAllSlots>
+  <EccentricDefenseGrid_OrdnanceCount>{0} ({1})</EccentricDefenseGrid_OrdnanceCount>
+  <EccentricDefenseGrid_OrdnanceSelect>(Select Ordnance)</EccentricDefenseGrid_OrdnanceSelect>
+  <EccentricDefenseGrid_OrdnanceUnload>(Unload Ordnance)</EccentricDefenseGrid_OrdnanceUnload>
+  <EccentricDefenseGrid_OrdnanceAutoReload>Auto Reload</EccentricDefenseGrid_OrdnanceAutoReload>
+
+  <EccentricDefenseGrid_OrdnanceReady>Ready to Launch</EccentricDefenseGrid_OrdnanceReady>
+  <EccentricDefenseGrid_OrdnanceInactive>Inactive</EccentricDefenseGrid_OrdnanceInactive>
+  <EccentricDefenseGrid_OrdnanceStartingUp>Initializing... {0}s</EccentricDefenseGrid_OrdnanceStartingUp>
+  <EccentricDefenseGrid_OrdnanceOnCooldown>On Cooldown... {0}s</EccentricDefenseGrid_OrdnanceOnCooldown>
+
+  <EccentricDefenseGrid_ConfigMissingOrdnance>No ordnance properties defined for OrdnanceDef {0}</EccentricDefenseGrid_ConfigMissingOrdnance>
+  <EccentricDefenseGrid_ConfigMissingProjectile>No projectile defined in ordnance properties for OrdnanceDef {0}</EccentricDefenseGrid_ConfigMissingProjectile>
+
+  <EccentricDefenseGrid_DesignateArtillery>Designate Artillery</EccentricDefenseGrid_DesignateArtillery>
+  <EccentricDefenseGrid_DesignateArtilleryDesc>Designate a target for an artillery strike from local defense network ordnance.\n\nRight click to select ordnance type.</EccentricDefenseGrid_DesignateArtilleryDesc>
+
+  <EccentricDefenseGrid_DesignatorNotDraftedDesc>Must be drafted to be used.</EccentricDefenseGrid_DesignatorNotDraftedDesc>
+  <EccentricDefenseGrid_DesignatorNotConnectedDesc>Cannot find a local defense grid to connect to.</EccentricDefenseGrid_DesignatorNotConnectedDesc>
+  <EccentricDefenseGrid_DesignatorNoOrdnanceDesc>Local defense grids do not have any loaded ordnance.</EccentricDefenseGrid_DesignatorNoOrdnanceDesc>
+  <EccentricDefenseGrid_DesignatorNoPawnDesc>Cannot designate artillery strikes without a manned console or field designator.</EccentricDefenseGrid_DesignatorNoPawnDesc>
+
+  <EccentricDefenseGrid_DesignatorErrorAntiTank>Anti-tank ordnance can only lock onto targets of sufficient size or density.</EccentricDefenseGrid_DesignatorErrorAntiTank>
+  <EccentricDefenseGrid_DesignatorErrorSensorRange>Target is outside of sensor tower range.</EccentricDefenseGrid_DesignatorErrorSensorRange>
+
+  <EccentricDefenseGrid_DesignatorCannotConnect>Error: Unable to connect to defense grid network, please try again.</EccentricDefenseGrid_DesignatorCannotConnect>
+  <EccentricDefenseGrid_DesignatorInvalidOrdnance>Error: Invalid ordnance type selected.</EccentricDefenseGrid_DesignatorInvalidOrdnance>
+  <EccentricDefenseGrid_DesignatorEmptyOrdnance>Error: Selected ordnance type is empty.</EccentricDefenseGrid_DesignatorEmptyOrdnance>
+  <EccentricDefenseGrid_DesignatorOrdnanceUnavailable>Error: Selected ordnance type is unavailable.</EccentricDefenseGrid_DesignatorOrdnanceUnavailable>
+  <EccentricDefenseGrid_DesignatorInvalidCaster>Error: Invalid pawn attempted to designate target.</EccentricDefenseGrid_DesignatorInvalidCaster>
+  <EccentricDefenseGrid_DesignatorCooldownActive>Error: Selected launcher is on cooldown.</EccentricDefenseGrid_DesignatorCooldownActive>
+  <EccentricDefenseGrid_DesignatorNoneAvailable>Error: No launchers were able to fire.</EccentricDefenseGrid_DesignatorNoneAvailable>
+
+  <EccentricDefenseGrid_NetworkNoOrdnanceDesc>Selected defense grid does not have any loaded ordnance.</EccentricDefenseGrid_NetworkNoOrdnanceDesc>
+
+  <EccentricDefenseGrid_DesignationModeSingle>Single</EccentricDefenseGrid_DesignationModeSingle>
+  <EccentricDefenseGrid_DesignationModeSingleDesc>Launches a single round of the selected type from the nearest available launcher.</EccentricDefenseGrid_DesignationModeSingleDesc>
+  <EccentricDefenseGrid_DesignationModeCluster>Cluster</EccentricDefenseGrid_DesignationModeCluster>
+  <EccentricDefenseGrid_DesignationModeClusterDesc>Launches all ordnance from the selected launcher.</EccentricDefenseGrid_DesignationModeClusterDesc>
+  <EccentricDefenseGrid_DesignationModeVolley>Volley</EccentricDefenseGrid_DesignationModeVolley>
+  <EccentricDefenseGrid_DesignationModeVolleyDesc>Launches a round of the selected type from all available launchers.</EccentricDefenseGrid_DesignationModeVolleyDesc>
+
+</LanguageData>

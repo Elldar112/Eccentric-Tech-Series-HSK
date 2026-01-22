@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Launch smoke -->
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_ArtilleryLauncherSmokeRing</defName>
+    <type>Particle</type>
+    <priority>Medium</priority>
+    <materialPaths>
+      <li>Eccentric/Effects/Launch_SmokeRingA</li>
+      <li>Eccentric/Effects/Launch_SmokeRingB</li>
+    </materialPaths>
+    <shaderType>Transparent</shaderType>
+    <altitude>PawnRope</altitude>
+    <altitudeAdjustment>2</altitudeAdjustment>
+    <opacity>1.0</opacity>
+    <duration>60</duration>
+    <drawSize>(3,0,3)</drawSize>
+    <rotationOffset>-180~180</rotationOffset>
+    <attachToOrigin>true</attachToOrigin>
+    <sizeFunction>EaseOutCubic</sizeFunction>
+    <opacityFunction>FadeOutCubic</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_ArtilleryLauncherSmokePuff</defName>
+    <type>Drifter</type>
+    <priority>Medium</priority>
+    <materialPaths>
+      <li>Eccentric/Effects/Launch_SmokePuffA</li>
+      <li>Eccentric/Effects/Launch_SmokePuffB</li>
+      <li>Eccentric/Effects/Launch_SmokePuffC</li>
+    </materialPaths>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>MoteOverheadLow</altitude>
+    <drawSize>(1,0,1)</drawSize>
+    <sizeRange>0.8~1.2</sizeRange>
+    <count>3</count>
+    <duration>75</duration>
+    <distance>0.2~1.6</distance>
+    <rotationRate>-6~6</rotationRate>
+    <applyRotationToDrawOffset>false</applyRotationToDrawOffset>
+    <sizeFunction>FadeOutQuad</sizeFunction>
+    <opacity>1.0</opacity>
+    <opacityFunction>FadeOutCubic</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+
+  <!-- Impact shockwave -->
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_ArtilleryImpactDistortion</defName>
+    <type>Particle</type>
+    <priority>Low</priority>
+    <materialPath>Eccentric/Effects/DistortionRing</materialPath>
+    <shaderType>MotePsychicConditionCauser</shaderType>
+    <shaderParameters>
+      <_distortionIntensity>0.015</_distortionIntensity>
+      <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      <_distortionScale>40</_distortionScale>
+    </shaderParameters>
+    <altitude>MoteOverhead</altitude>
+    <opacity>1.0</opacity>
+    <duration>12</duration>
+    <drawSize>(26,0,26)</drawSize>
+    <sizeFunction>EaseOutCubic</sizeFunction>
+    <opacityFunction>FadeOutCubic</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_ArtilleryImpactImplosion</defName>
+    <type>Particle</type>
+    <priority>Low</priority>
+    <materialPath>Eccentric/Effects/DistortionBubble</materialPath>
+    <shaderType>MotePsychicConditionCauser</shaderType>
+    <shaderParameters>
+      <_distortionIntensity>0.015</_distortionIntensity>
+      <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      <_distortionScale>40</_distortionScale>
+    </shaderParameters>
+    <altitude>MoteOverhead</altitude>
+    <opacity>1.0</opacity>
+    <duration>18</duration>
+    <drawSize>(30,0,30)</drawSize>
+    <minSize>0.3</minSize>
+    <progressFunction>EaseInCubic</progressFunction>
+    <sizeFunction>InverseSine</sizeFunction>
+    <opacityFunction>Sine</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+
+  <!-- Missile effects -->
+  <EccentricProjectiles.EffectDef Name="Eccentric_BaseArtilleryExhaust" Abstract="True">
+    <type>Particle</type>
+    <priority>Medium</priority>
+    <materialPath>Eccentric/Effects/Exhaust_Missile</materialPath>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>PawnRope</altitude>
+    <altitudeAdjustment>3</altitudeAdjustment>
+    <opacity>1.0</opacity>
+    <duration>1</duration>
+    <attachToParent>true</attachToParent>
+    <sizeFunction>None</sizeFunction>
+    <opacityFunction>None</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef Name="Eccentric_BaseArtilleryTrail" Abstract="True">
+    <type>Trail</type>
+    <priority>Medium</priority>
+    <materialPath>Eccentric/Effects/Trail_White</materialPath>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>PawnRope</altitude>
+    <altitudeAdjustment>1</altitudeAdjustment>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef Name="Eccentric_BaseArtillerySmoke" Abstract="True">
+    <type>Particle</type>
+    <priority>Medium</priority>
+    <materialPaths>
+      <li>Eccentric/Effects/Launch_SmokePuffA</li>
+      <li>Eccentric/Effects/Launch_SmokePuffB</li>
+      <li>Eccentric/Effects/Launch_SmokePuffC</li>
+    </materialPaths>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>PawnRope</altitude>
+    <altitudeAdjustment>2</altitudeAdjustment>
+    <drawSize>(1,0,1)</drawSize>
+    <sizeRange>0.8~1.2</sizeRange>
+    <duration>60</duration>
+    <distance>0.2~1.6</distance>
+    <rotationOffset>-180~180</rotationOffset>
+    <sizeFunction>Burst</sizeFunction>
+    <opacity>1.0</opacity>
+    <opacityFunction>FadeOutQuad</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+
+  <!-- M36 PGM effects -->
+  <EccentricProjectiles.EffectDef ParentName="Eccentric_BaseArtilleryTrail">
+    <defName>Eccentric_ArtilleryMissileTrail</defName>
+    <size>0.16</size>
+    <startAfter>24</startAfter>
+    <duration>45</duration>
+    <colorCurve>
+      <points>
+        <!--<li><key>0.15</key><value>(255,234,0)</value></li>-->
+        <!--<li><key>0.3</key><value>(128,0,0)</value></li>-->
+        <!--<li><key>0.6</key><value>(0,0,0)</value></li>-->
+        <li><key>0.15</key><value>(159,248,255)</value></li>
+        <li><key>0.3</key><value>(111,203,131)</value></li>
+        <li><key>0.6</key><value>(153,153,153)</value></li>
+      </points>
+    </colorCurve>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef ParentName="Eccentric_BaseArtillerySmoke">
+    <defName>Eccentric_ArtilleryMissileSmoke</defName>
+    <startAfter>24</startAfter>
+    <duration>60</duration>
+    <colorCurve>
+      <points>
+        <!--<li><key>0.1</key><value>(255,234,0)</value></li>-->
+        <!--<li><key>0.2</key><value>(128,0,0)</value></li>-->
+        <!--<li><key>0.4</key><value>(0,0,0)</value></li>-->
+        <li><key>0.1</key><value>(159,248,255)</value></li>
+        <li><key>0.2</key><value>(111,203,131)</value></li>
+        <li><key>0.4</key><value>(153,153,153)</value></li>
+      </points>
+    </colorCurve>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef ParentName="Eccentric_BaseArtilleryExhaust">
+    <defName>Eccentric_ArtilleryMissileExhaust</defName>
+    <drawSize>(1,0,1)</drawSize>
+    <drawOffset>(0,0,-0.45)</drawOffset>
+    <startAfter>24</startAfter>
+    <sizeRange>0.8~1.2</sizeRange>
+  </EccentricProjectiles.EffectDef>
+
+  <!--
+  <EccentricProjectiles.EffectDef ParentName="Eccentric_BaseArtilleryTrail">
+    <defName>Eccentric_ArtilleryMissileNyan</defName>
+    <size>0.3</size>
+    <duration>60</duration>
+    <colorCurve>
+      <points>
+        <li><key>0.1</key><value>(255,0,0)</value></li>
+        <li><key>0.25</key><value>(255,255,0)</value></li>
+        <li><key>0.4</key><value>(0,255,0)</value></li>
+        <li><key>0.55</key><value>(0,255,255)</value></li>
+        <li><key>0.7</key><value>(0,0,255)</value></li>
+        <li><key>0.85</key><value>(255,0,255)</value></li>
+      </points>
+    </colorCurve>
+    <opacityFunction>FadeOutCubic</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  -->
+
+  <!-- Laser designator -->
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_DefenseGridLaserLine</defName>
+    <type>Trail</type>
+    <priority>High</priority>
+    <materialPath>Eccentric/Effects/Line_LaserDesignator</materialPath>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>MoteOverhead</altitude>
+    <altitudeAdjustment>0</altitudeAdjustment>
+    <drawOffset>(0,0,0.8)</drawOffset>
+    <destinationDrawOffset>(0,0,-0.25)</destinationDrawOffset>
+    <size>0.08</size>
+    <interval>6</interval>
+    <duration>6</duration>
+    <sizeFunction>None</sizeFunction>
+    <opacity>0.6</opacity>
+    <opacityFunction>Sine</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_DefenseGridLaserPulse</defName>
+    <type>Particle</type>
+    <priority>Critical</priority>
+    <materialPath>Eccentric/Effects/Pulse_LaserDesignator</materialPath>
+    <shaderType>TransparentPostLight</shaderType>
+    <altitude>MoteOverhead</altitude>
+    <altitudeAdjustment>1</altitudeAdjustment>
+    <attachToTarget>true</attachToTarget>
+    <attachPersistently>false</attachPersistently>
+    <drawSize>(1,0,1)</drawSize>
+    <interval>6</interval>
+    <duration>6</duration>
+    <sizeFunction>None</sizeFunction>
+    <minOpacity>0.3</minOpacity>
+    <opacityFunction>Sine</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+
+  <!-- Heat wave -->
+  <EccentricProjectiles.EffectDef>
+    <defName>Eccentric_DefenseGridHeatDistortion</defName>
+    <type>Drifter</type>
+    <priority>Low</priority>
+    <materialPaths>
+      <li>Eccentric/Effects/DistortionWaveA</li>
+      <li>Eccentric/Effects/DistortionWaveB</li>
+      <li>Eccentric/Effects/DistortionWaveC</li>
+    </materialPaths>
+    <shaderType>MotePsychicConditionCauser</shaderType>
+    <shaderParameters>
+      <_distortionIntensity>0.015</_distortionIntensity>
+      <_brightnessMultiplier>1.1</_brightnessMultiplier>
+      <_distortionScale>40</_distortionScale>
+    </shaderParameters>
+    <altitude>MoteOverhead</altitude>
+    <opacity>0.3</opacity>
+    <interval>120</interval>
+    <duration>120</duration>
+    <drawSize>(3,0,3)</drawSize>
+    <distance>1.0~1.2</distance>
+    <minSize>0.5</minSize>
+    <sizeFunction>None</sizeFunction>
+    <opacityFunction>Sine</opacityFunction>
+  </EccentricProjectiles.EffectDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="BluntBase">
+    <defName>Eccentric_BluntExplosive</defName>
+    <deathMessage>{0} has been crushed to death.</deathMessage>
+    <soundExplosion>MeleeHit_Metal_Blunt</soundExplosion>
+  </DamageDef>
+
+  <DamageDef ParentName="Bomb">
+    <defName>Eccentric_BombCenterMass</defName>
+    <label>bomb</label>
+    <workerClass>EccentricDefenseGrid.DamageWorker_AddInjuryCenterMass</workerClass>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+  </DamageDef>
+
+</Defs>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== M51 charge autocannon turret ===============-->
+  <ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Turret_M51AC</defName>
+    <label>M51 charge autocannon turret</label>
+    <description>The Mark 51 turret is a ship-mounted twin-barreled charge-shot autocannon designed for use as a point defense weapon on military starships. It is powerful and sturdy, but can only be built on gravship substructure and requires external control via a defense grid console.\n\nIf connected to a supply network, it can reload itself using networked storage</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShipTurret_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(1.93,0.5,1.69)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/ChargeAutocannon_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>200</Mass>
+      <Beauty>-5</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_MannableRemoteOnly">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="EccentricFurniture.CompProperties_SupplyConduit" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="EccentricFurniture.CompProperties_SupplyConsumer" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="EccentricFurniture.CompProperties_Autoloader" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until reload</fuelLabel>
+        <fuelGizmoLabel>Ammunition</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>120</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>2.00</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Needs to be reloaded</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <Steel>250</Steel>
+      <Plasteel>100</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building>
+      <combatPower>60</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Eccentric_Gun_M51AC</turretGunDef>
+      <turretTopDrawSize>3</turretTopDrawSize>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_OnSubstructure</li>
+      <li>PlaceWorker_TurretTop</li>
+      <li>EccentricProjectiles.PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- gun -->
+  <ThingDef ParentName="BaseWeaponTurret" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Gun_M51AC</defName>
+    <label>M51 charge autocannon</label>
+    <description>A heavy twin-barreled charge-shot autocannon.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ChargeAutocannon_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <statBases>
+      <AccuracyTouch>0.33</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.71</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Eccentric_Bullet_ChargeAutocannon</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <minRange>8.9</minRange>
+        <range>32.9</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>EccentricDefenseGrid_ChargeAutocannonShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <comps/>
+  </ThingDef>
+  <!-- bullet -->
+  <ThingDef ParentName="BaseBullet" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Bullet_ChargeAutocannon</defName>
+    <label>charge shot</label>
+    <thingClass>EccentricProjectiles.Bullet_WithEffects</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_ChargeAutocannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationBase>0.50</armorPenetrationBase>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>90</speed>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <alignOriginWithDrawPos>true</alignOriginWithDrawPos>
+        <originOffsets>
+          <li>(-0.25,0,1.086)</li>
+          <li>(0.25,0,1.086)</li>
+        </originOffsets>
+        <alignOriginOffsetWithDirection>true</alignOriginOffsetWithDirection>
+        <launchEffects>
+          <li>EccentricDefenseGrid_AutocannonFlash</li>
+        </launchEffects>
+        <effects>
+          <li>EccentricDefenseGrid_AutocannonTrail</li>
+        </effects>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!--=============== M64 railgun turret ===============-->
+  <ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Turret_M64RG</defName>
+    <label>M64 railgun turret</label>
+    <description>The Mark 64 turret is a ship-mounted railgun designed for use as a light anti-ship weapon on military starships. It is powerful and sturdy, but can only be built on gravship substructure and requires external control via a defense grid console.\n\nIf connected to a supply network, it can reload itself using networked storage</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/ShipTurret_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(1.93,0.5,1.69)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/Railgun_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>200</Mass>
+      <Beauty>-5</Beauty>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>800</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_MannableRemoteOnly">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="EccentricFurniture.CompProperties_SupplyConduit" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="EccentricFurniture.CompProperties_SupplyConsumer" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="EccentricFurniture.CompProperties_Autoloader" MayRequire="Aelanna.EccentricTech.Furniture" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until reload</fuelLabel>
+        <fuelGizmoLabel>Ammunition</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>30</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>0.50</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Needs to be reloaded</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <Steel>250</Steel>
+      <Plasteel>50</Plasteel>
+      <Uranium>60</Uranium>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building>
+      <combatPower>60</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Eccentric_Gun_M64RG</turretGunDef>
+      <turretTopDrawSize>3</turretTopDrawSize>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_OnSubstructure</li>
+      <li>PlaceWorker_TurretTop</li>
+      <li>EccentricProjectiles.PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- gun -->
+  <ThingDef ParentName="BaseWeaponTurret" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Gun_M64RG</defName>
+    <label>M64 railgun</label>
+    <description>A heavy mounted railgun.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/Railgun_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <statBases>
+      <AccuracyTouch>0.38</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.76</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>120</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Eccentric_Bullet_Railgun</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <minRange>11.9</minRange>
+        <range>45.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>EccentricDefenseGrid_RailgunShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <comps/>
+  </ThingDef>
+  <!-- bullet -->
+  <ThingDef ParentName="BaseBullet" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Eccentric_Bullet_Railgun</defName>
+    <label>charge shot</label>
+    <thingClass>EccentricProjectiles.Bullet_WithEffects</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_Railgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <armorPenetrationBase>1.00</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>150</speed>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <alignOriginWithDrawPos>true</alignOriginWithDrawPos>
+        <originOffset>(0,0,1.3)</originOffset>
+        <alignOriginOffsetWithDirection>true</alignOriginOffsetWithDirection>
+        <launchEffects>
+          <li>EccentricDefenseGrid_RailgunFlashPulse</li>
+          <li>EccentricDefenseGrid_RailgunFlashWave</li>
+        </launchEffects>
+        <effects>
+          <li>EccentricDefenseGrid_RailgunTrail</li>
+          <li>EccentricDefenseGrid_RailgunDistortionTrail</li>
+        </effects>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

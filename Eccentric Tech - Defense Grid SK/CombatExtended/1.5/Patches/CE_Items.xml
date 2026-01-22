@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <!-- remote artillery designator -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Eccentric_ArtilleryDesignator"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_ArtilleryDesignator"]/verb/range</xpath>
+    <value>
+      <range>100</range>
+    </value>
+  </Operation>
+
+</Patch>

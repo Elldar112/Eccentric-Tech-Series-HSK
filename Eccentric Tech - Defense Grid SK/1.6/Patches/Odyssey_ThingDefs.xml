@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="GravshipShieldGenerator"]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GravshipShieldGenerator"]/comps</xpath>
+      <value>
+        <li Class="EccentricDefenseGrid.CompProperties_Dismantlable">
+          <requiredSkill>Construction</requiredSkill>
+          <requiredSkillLevel>8</requiredSkillLevel>
+          <product>Eccentric_HighEnergyShieldCore</product>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

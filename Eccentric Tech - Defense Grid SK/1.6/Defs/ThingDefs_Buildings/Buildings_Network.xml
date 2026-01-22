@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Defense grid conduit -->
+  <ThingDef ParentName="BuildingBase" Name="Eccentric_DefenseConduit">
+    <defName>Eccentric_DefenseConduit</defName>
+    <label>defense grid conduit</label>
+    <description>A sophisticated conduit containing high-energy power links and coolant pipelines used to connect military-grade shield and weapon systems.\n\nCan be placed under walls and other buildings.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/DefenseGridConduit</texPath>
+      <graphicClass>EccentricDefenseGrid.Graphic_DefenseConduit</graphicClass>
+      <damageData>
+        <rect>(0,0.35,1,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/DefenseGridConduitSingle</uiIconPath>
+    <uiIconScale>0.7</uiIconScale>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+        <texPath>Eccentric/Things/Buildings/DefenseGridConduitBlueprint</texPath>
+        <graphicClass>EccentricDefenseGrid.Graphic_DefenseConduit</graphicClass>
+      </blueprintGraphicData>
+    </building>
+    <drawerType>MapMeshOnly</drawerType>
+    <altitudeLayer>Conduits</altitudeLayer>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>60</WorkToBuild>
+      <Flammability>0.7</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <drawStyleCategory>Conduits</drawStyleCategory>
+    <costList>
+      <Plasteel>5</Plasteel>
+      <Chemfuel>1</Chemfuel>
+    </costList>
+    <comps>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit">
+        <deconstructedByDesignator>true</deconstructedByDesignator>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseConduit</li>
+    </placeWorkers>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <clearBuildingArea>false</clearBuildingArea>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridNetwork</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Hidden defense grid conduit -->
+  <ThingDef ParentName="Eccentric_DefenseConduit">
+    <defName>Eccentric_DefenseConduitUnderground</defName>
+    <label>hidden defense grid conduit</label>
+    <description>A sophisticated conduit containing high-energy power links and coolant pipelines used to connect military-grade shield and weapon systems.\n\nThis particular conduit is buried underground, which requires more work and materials to build but protects the conduit from damage and creates less clutter in the area.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/DefenseGridConduitBlank</texPath>
+    </graphicData>
+    <uiIconPath>Eccentric/Things/Buildings/DefenseGridConduitSingleUnderground</uiIconPath>
+    <building>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <isTargetable>false</isTargetable>
+      <expandHomeArea>false</expandHomeArea>
+      <canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+    </building>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+    <costList>
+      <Steel>3</Steel>
+    </costList>
+  </ThingDef>
+
+  <!-- Defense grid console -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_DefenseGridConsole</defName>
+    <label>defense grid console</label>
+    <description>A console that allows for direct control of the connected defense grid network. A console must be manned by a human operator to allow for remote designation of artillery strikes.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/DefenseGridConsole_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConsole" />
+      <li Class="EccentricDefenseGrid.CompProperties_ConsoleOverlay">
+        <activeOverlayPath>Eccentric/Things/Buildings/DefenseGridConsole_Overlay</activeOverlayPath>
+        <drawSize>(2,0,2)</drawSize>
+      </li>
+    </comps>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <rotatable>true</rotatable>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridNetwork</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Turret controller -->
+  <ThingDef ParentName="Eccentric_DefenseGridBuildingBase">
+    <defName>Eccentric_DefenseTurretController</defName>
+    <label>remote turret controller</label>
+    <description>An interface that allows a manned turret to be remotely controlled via defense grid consoles. A single colonist can control all manned turrets connected to the network from a single console.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Eccentric/Things/Buildings/TurretController</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseTurretController" />
+    </comps>
+    <rotatable>true</rotatable>
+    <passability>Standable</passability>
+    <fillPercent>0</fillPercent>
+    <pathCost>5</pathCost>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <placeWorkers>
+      <li>EccentricDefenseGrid.PlaceWorker_DefenseTurretController</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <researchPrerequisites>
+      <li>Eccentric_DefenseGridNetwork</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+
+</Defs>

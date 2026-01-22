@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+ <!-- Parent -->
+ 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="EccentricDefenseGrid_BaseMakeableOrdnance"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>40</costStuffCount>
+		</value>
+	</Operation>
+
+  <!-- M36 PGM (high explosive) -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M36PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <LeadBar>24</LeadBar>
+			  <Electronics>2</Electronics>
+			  <Powder>18</Powder>
+			  <FSX>4</FSX>
+			  <ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+	
+
+  <!-- M38 PGM (incendiary) -->
+ 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M38PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <LeadBar>24</LeadBar>
+			  <Electronics>2</Electronics>
+	  		  <Powder>16</Powder>
+			  <Napalm>5</Napalm>
+			  <ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+	
+  <!-- M39 PGM (EMP) -->
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M39PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <LeadBar>24</LeadBar>
+			  <Electronics>2</Electronics>
+			  <Powder>14</Powder>
+			  <ElectronicComponents>3</ElectronicComponents>
+			  <ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+	
+  <!-- M48 PGM (HEAT) -->
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M48PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <Tungsten>18</Tungsten>
+			  <Electronics>2</Electronics>
+			  <Powder>24</Powder>
+			  <FSX>4</FSX>
+			  <ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+	
+  <!-- M56 PGM (Shield) -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M56PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <LeadBar>24</LeadBar>
+			  <Electronics>2</Electronics>
+			  <Powder>14</Powder>
+			  <Eccentric_HexCell>2</Eccentric_HexCell>
+			  <ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+
+  <!-- M61 PGM (antigrain) -->
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M61PGM"]/costList</xpath>
+		<value>
+			<costList>
+			  <LeadBar>24</LeadBar>
+			  <Electronics>2</Electronics>
+		  	  <Powder>28</Powder>
+			  <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
+			  <ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+		</value>	
+	</Operation>
+	
+</Patch>

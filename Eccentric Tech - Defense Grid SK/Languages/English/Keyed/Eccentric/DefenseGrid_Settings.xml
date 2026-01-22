@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_ModName>Eccentric Tech - Defense Grid</EccentricDefenseGrid_ModName>
+
+  <EccentricDefenseGrid_ProjectorEffects>Shield Projector Effects</EccentricDefenseGrid_ProjectorEffects>
+  <EccentricDefenseGrid_ProjectorEffectsDesc>Determines when the shield projector field range overlays are visible. Note that shield systems are always active regardless even if they are not visible.</EccentricDefenseGrid_ProjectorEffectsDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffects>Always Visible</EccentricDefenseGrid_ShowProjectorEffects>
+  <EccentricDefenseGrid_ShowProjectorEffectsDesc>Always show field overlay for active shield projectors.</EccentricDefenseGrid_ShowProjectorEffectsDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsSelected>Show When Selected</EccentricDefenseGrid_ShowProjectorEffectsSelected>
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedDesc>Shows shield projector field overlays for selected projectors.</EccentricDefenseGrid_ShowProjectorEffectsSelectedDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedNetwork>Show When Network Selected</EccentricDefenseGrid_ShowProjectorEffectsSelectedNetwork>
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedNetworkDesc>Shows shield projector field overlays when any buildings in the same network are selected.</EccentricDefenseGrid_ShowProjectorEffectsSelectedNetworkDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsDanger>Show When In Danger</EccentricDefenseGrid_ShowProjectorEffectsDanger>
+  <EccentricDefenseGrid_ShowProjectorEffectsDangerDesc>Shows shield projector field overlays when story danger is present on the current map.</EccentricDefenseGrid_ShowProjectorEffectsDangerDesc>
+
+  <EccentricDefenseGrid_ShowInterceptionEffects>Show Interception Effects</EccentricDefenseGrid_ShowInterceptionEffects>
+  <EccentricDefenseGrid_ShowInterceptionEffectsDesc>Shows visual effects when shields intercept projectiles.</EccentricDefenseGrid_ShowInterceptionEffectsDesc>
+
+  <EccentricDefenseGrid_ShowInterceptionGrid>(Debug) Show Interception Grid</EccentricDefenseGrid_ShowInterceptionGrid>
+  <EccentricDefenseGrid_ShowInterceptionGridDesc>Shows the cached interception grid. Note that this does not represent the areas of the map completely protected by interceptors, it is the area wherein projectiles are checked.</EccentricDefenseGrid_ShowInterceptionGridDesc>
+
+  <EccentricDefenseGrid_ShowDefenseGridStatus>Show Defense Grid Status Window</EccentricDefenseGrid_ShowDefenseGridStatus>
+  <EccentricDefenseGrid_ShowDefenseGridStatusDesc>Shows the defense grid status window.</EccentricDefenseGrid_ShowDefenseGridStatusDesc>
+
+  <EccentricDefenseGrid_Reset>Reset</EccentricDefenseGrid_Reset>
+  <EccentricDefenseGrid_ResetStatusWindowPosition>Reset HUD Position</EccentricDefenseGrid_ResetStatusWindowPosition>
+  <EccentricDefenseGrid_ResetStatusWindowPositionDesc>Resets the position of the defense grid HUD to the center of the screen. Use in case it has become unreachable.</EccentricDefenseGrid_ResetStatusWindowPositionDesc>
+
+</LanguageData>

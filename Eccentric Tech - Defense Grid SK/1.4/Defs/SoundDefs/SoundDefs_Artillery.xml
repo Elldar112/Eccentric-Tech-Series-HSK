@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Designator SFX -->
+  <SoundDef>
+    <defName>Eccentric_ArtilleryDesignatorWarmup</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Designator_Warmup</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <pitchRange>1</pitchRange>
+        <distRange>5~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Eccentric_ArtilleryDesignatorComplete</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Designator_Complete</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25</volumeRange>
+        <pitchRange>1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Missile launcher SFX -->
+  <SoundDef>
+    <defName>Eccentric_ArtilleryLauncherHatch</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Launcher_Hatch</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~33</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Missile launch SFX -->
+  <SoundDef>
+    <defName>Eccentric_ArtilleryMissileEject</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Missile_Eject</clipPath>
+          </li>
+        </grains>
+        <volumeRange>38~42</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Eccentric_ArtilleryMissileIgnite</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Missile_Ignite</clipPath>
+          </li>
+        </grains>
+        <volumeRange>38~42</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!--
+  <SoundDef>
+    <defName>Eccentric_ArtilleryMissileNyan</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Missile_Nyan</clipPath>
+          </li>
+        </grains>
+        <volumeRange>38~42</volumeRange>
+        <pitchRange>1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  -->
+
+</Defs>

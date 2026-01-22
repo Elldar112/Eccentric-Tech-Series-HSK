@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_StatusNoNetworks>No networks in range...</EccentricDefenseGrid_StatusNoNetworks>
+
+  <EccentricDefenseGrid_StatusAmount>{0} / {1}</EccentricDefenseGrid_StatusAmount>
+
+  <EccentricDefenseGrid_StatusEnergyTotal>Total System Energy</EccentricDefenseGrid_StatusEnergyTotal>
+  <EccentricDefenseGrid_StatusEnergyCount>Capacitors: {0}</EccentricDefenseGrid_StatusEnergyCount>
+  <EccentricDefenseGrid_StatusEnergyDesc>The total amount of shield energy available to this network. Intercepting projectiles drains energy, and if all energy is drained then the shield will collapse.</EccentricDefenseGrid_StatusEnergyDesc>
+  <EccentricDefenseGrid_StatusEnergyAction>Click to show or hide the capacitor grid.</EccentricDefenseGrid_StatusEnergyAction>
+
+  <EccentricDefenseGrid_StatusHeatTotal>Total System Heat</EccentricDefenseGrid_StatusHeatTotal>
+  <EccentricDefenseGrid_StatusHeatCount>Heatsinks: {0}</EccentricDefenseGrid_StatusHeatCount>
+  <EccentricDefenseGrid_StatusHeatDesc>The total amount of heat in this network. Intercepting projectiles generates heat, and if system heat is too high then generators have a chance to overload, rendering them inoperable until system heat drops back down.</EccentricDefenseGrid_StatusHeatDesc>
+  <EccentricDefenseGrid_StatusHeatAction>Click to show or hide the heatsink grid.</EccentricDefenseGrid_StatusHeatAction>
+
+  <EccentricDefenseGrid_Color>Change Color</EccentricDefenseGrid_Color>
+  <EccentricDefenseGrid_ColorDesc>Changes the color of this building. This change is purely visual and does not affect its functionality.</EccentricDefenseGrid_ColorDesc>
+  <EccentricDefenseGrid_ColorDefault>Default</EccentricDefenseGrid_ColorDefault>
+  <EccentricDefenseGrid_ColorRedLabel>R: {0}</EccentricDefenseGrid_ColorRedLabel>
+  <EccentricDefenseGrid_ColorGreenLabel>G: {0}</EccentricDefenseGrid_ColorGreenLabel>
+  <EccentricDefenseGrid_ColorBlueLabel>B: {0}</EccentricDefenseGrid_ColorBlueLabel>
+  <EccentricDefenseGrid_ColorAlphaLabel>A: {0}</EccentricDefenseGrid_ColorAlphaLabel>
+
+  <EccentricDefenseGrid_ColorCopy>Copy Color</EccentricDefenseGrid_ColorCopy>
+  <EccentricDefenseGrid_ColorCopyDesc>Copy the color of this building so it can be pasted to other buildings.</EccentricDefenseGrid_ColorCopyDesc>
+
+  <EccentricDefenseGrid_ColorPaste>Paste Color</EccentricDefenseGrid_ColorPaste>
+  <EccentricDefenseGrid_ColorPasteDesc>Paste the currently copied color onto this building.</EccentricDefenseGrid_ColorPasteDesc>
+
+  <EccentricDefenseGrid_ColorClear>Clear</EccentricDefenseGrid_ColorClear>
+  <EccentricDefenseGrid_ColorClearDesc>Clear the copied color from the clipboard.</EccentricDefenseGrid_ColorClearDesc>
+
+  <EccentricDefenseGrid_DismantleFor>Dismantle for {0}</EccentricDefenseGrid_DismantleFor>
+  <EccentricDefenseGrid_DismantleSkillReq>Dismantle for {0} (requires {1} {2})</EccentricDefenseGrid_DismantleSkillReq>
+
+</LanguageData>

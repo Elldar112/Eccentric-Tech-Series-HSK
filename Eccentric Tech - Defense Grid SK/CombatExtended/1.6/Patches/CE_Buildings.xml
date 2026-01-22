@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Missile launchers -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Eccentric_ArtilleryVerticalMissileLauncher"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_ArtilleryMissileLauncher"]</xpath>
+    <value>
+      <compClass>EccentricDefenseGrid.CompArtilleryMissileLauncherCE</compClass>
+    </value>
+  </Operation>
+
+  <!-- Sensor towers -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Eccentric_ArtillerySensorTower"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_ArtillerySensor"]/range</xpath>
+    <value>
+      <range>55</range>
+    </value>
+  </Operation>
+
+  <!-- Networked shield capacitor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor"]</xpath>
+    <value>
+      <li Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor">
+        <energyCapacity>1500</energyCapacity>
+        <energyGainPerHour>750</energyGainPerHour>
+        <energyDrainPerHour>3000</energyDrainPerHour>
+        <energyRechargeDelay>300</energyRechargeDelay>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Networked shield generator -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Eccentric_ShieldGenerator"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseGenerator"]</xpath>
+    <value>
+      <compClass>EccentricDefenseGrid.CompDefenseGeneratorCE</compClass>
+    </value>
+  </Operation>
+
+  <!-- Standalone generator -->
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="Eccentric_StandaloneShieldGenerator"]/comps/li[@Class="EccentricProjectiles.CompProperties_ProjectileInterceptor"]</xpath>
+    <attribute>Class</attribute>
+    <value>EccentricProjectiles.CompProperties_ProjectileInterceptorCE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Eccentric_StandaloneShieldGenerator"]/comps/li[@Class="EccentricProjectiles.CompProperties_BurnoutBattery"]</xpath>
+    <value>
+      <li Class="EccentricProjectiles.CompProperties_BurnoutBattery">
+        <startingEnergy>2000</startingEnergy>
+        <energyDrainPerHour>1000</energyDrainPerHour>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Register a requested version with Eccentric Projectiles to detect out of date libraries -->
+  <EccentricProjectiles.VersionCheck>
+    <defName>EccentricTech_DefenseGrid</defName>
+    <major>6</major>
+    <minor>4</minor>
+    <build>0</build>
+    <revision>0</revision>
+  </EccentricProjectiles.VersionCheck>
+
+</Defs>

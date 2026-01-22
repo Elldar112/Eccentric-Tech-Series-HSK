@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_DefenseGrid</defName>
+		<label>Defense Grid Shields</label>
+		<description>Defenseive shield generator system for Your colony.</description>
+		<defNames>
+			<li>Eccentric_ShieldGenerator</li>
+			<li>Eccentric_ShieldProjector</li>
+			<li>Eccentric_ShieldProjectorWide</li>
+			<li>Eccentric_ShieldProjector3x3Wide</li>
+			<li>Eccentric_ShieldCapacitor</li>
+			<li>Eccentric_ShieldHeatsink</li>
+			<li>Eccentric_DefenseGridConsole</li>
+		</defNames>
+		<designationCategory>Security</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+
+<!--	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_DefenseGridTurrets</defName>
+		<label>Defense Grid Turrets</label>
+		<description>Defense Grid system for Your colony.</description>
+		<defNames>
+			<li>Eccentric_Turret_M51AC</li>
+			<li>Eccentric_Turret_M64RG</li>
+			<li>Eccentric_Gun_M64RG</li>
+			<li>Eccentric_DefenseTurretController</li>
+		</defNames>
+		<designationCategory>Security</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef> -->
+	
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_DefenseGridArtillery</defName>
+		<label>Defense Grid Artillery and Turrets </label>
+		<description>AI controlled artillery and turret grid for Your colony.</description>
+		<defNames>
+			<li>Eccentric_ArtilleryVerticalMissileLauncher</li>
+			<li>Eccentric_ArtillerySensorTower</li>		
+			<li>Eccentric_Turret_M51AC</li>
+			<li>Eccentric_Turret_M64RG</li>
+			<li>Eccentric_Gun_M64RG</li>
+			<li>Eccentric_DefenseTurretController</li>
+			<li>Eccentric_DefenseGridConsole</li>
+		</defNames>
+		<designationCategory>Security</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+
+
+	<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_DefenseGridConduits</defName>
+		<label>Defense Grid Conduits</label>
+		<description>Connects the defense grid system for Your colony.</description>
+		<defNames>
+			<li>Eccentric_DefenseConduit</li>
+			<li>Eccentric_DefenseConduitUnderground</li>
+		</defNames>
+		<designationCategory>Security</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+	
+</Defs>

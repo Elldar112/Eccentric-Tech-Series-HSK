@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="EccentricDefenseGrid_BaseArtilleryProjectile"]/thingClass</xpath>
+    <value>
+      <thingClass>EccentricProjectiles.ProjectileCE_ExplosiveStagedWithEffects</thingClass>
+    </value>
+  </Operation>
+
+  <!-- M36 (HE) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M36PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>40</Steel>
+        <Chemfuel>20</Chemfuel>
+        <FSX>10</FSX>
+        <ComponentIndustrial>4</ComponentIndustrial>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M36PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Bomb</damageDef>
+        <damageAmountBase>250</damageAmountBase>
+        <explosionRadius>4.9</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>MortarBomb_Explode</soundExplode>
+        <suppressionFactor>3.0</suppressionFactor>
+        <dangerFactor>2.0</dangerFactor>
+        <speed>40</speed>
+      </projectile>
+      <comps>
+        <li Class="CombatExtended.CompProperties_Fragments">
+          <fragSpeedFactor>1</fragSpeedFactor>
+          <fragments>
+            <Fragment_Large>30</Fragment_Large>
+            <Fragment_Small>60</Fragment_Small>
+          </fragments>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <!-- M38 (Incendiary) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M38PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>40</Steel>
+        <Chemfuel>20</Chemfuel>
+        <Prometheum>10</Prometheum>
+        <ComponentIndustrial>4</ComponentIndustrial>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M38PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>PrometheumFlame</damageDef>
+        <damageAmountBase>18</damageAmountBase>
+        <explosionRadius>4.9</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>0.15</preExplosionSpawnChance>
+        <soundExplode>MortarIncendiary_Explode</soundExplode>
+        <speed>40</speed>
+      </projectile>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ExplosiveCE">
+          <damageAmountBase>120</damageAmountBase>
+          <explosiveDamageType>Thermobaric</explosiveDamageType>
+          <explosiveRadius>2.5</explosiveRadius>
+          <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <!-- M39 (EMP) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M39PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>40</Steel>
+        <Chemfuel>20</Chemfuel>
+        <ComponentIndustrial>8</ComponentIndustrial>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M39PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>EMP</damageDef>
+        <damageAmountBase>240</damageAmountBase>
+        <explosionRadius>9.9</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+        <armorPenetrationBlunt>0</armorPenetrationBlunt>
+        <speed>40</speed>
+      </projectile>
+    </value>
+  </Operation>
+
+  <!-- M48 (HEAT) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M48PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>60</Steel>
+        <Chemfuel>20</Chemfuel>
+        <FSX>20</FSX>
+        <ComponentIndustrial>4</ComponentIndustrial>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M48PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>360</damageAmountBase>
+        <armorPenetrationSharp>725</armorPenetrationSharp>
+        <armorPenetrationBlunt>168</armorPenetrationBlunt>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>MortarBomb_Explode</soundExplode>
+        <suppressionFactor>3.0</suppressionFactor>
+        <dangerFactor>2.0</dangerFactor>
+        <speed>40</speed>
+      </projectile>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ExplosiveCE">
+          <damageAmountBase>210</damageAmountBase>
+          <explosiveDamageType>Bomb</explosiveDamageType>
+          <explosiveRadius>1.9</explosiveRadius>
+          <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        </li>
+        <li Class="CombatExtended.CompProperties_Fragments">
+          <fragSpeedFactor>1</fragSpeedFactor>
+          <fragments>
+            <Fragment_Large>10</Fragment_Large>
+            <Fragment_Small>40</Fragment_Small>
+          </fragments>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <!-- M56 (Shield) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M56PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>50</Steel>
+        <Chemfuel>20</Chemfuel>
+        <ComponentIndustrial>4</ComponentIndustrial>
+        <Eccentric_HexCell>1</Eccentric_HexCell>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M56PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Eccentric_BluntExplosive</damageDef>
+        <damageAmountBase>50</damageAmountBase>
+        <armorPenetrationSharp>55</armorPenetrationSharp>
+        <armorPenetrationBlunt>30</armorPenetrationBlunt>
+        <explosionRadius>0.5</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <speed>40</speed>
+        <postExplosionSpawnThingDef>Eccentric_StandaloneShieldGenerator</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      </projectile>
+    </value>
+  </Operation>
+
+  <!-- M61 (Antigrain) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M61PGM"]/ordnance/effectRadius</xpath>
+    <value>
+      <effectRadius>49.9</effectRadius>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M61PGM"]/costList</xpath>
+    <value>
+      <costList>
+        <Steel>60</Steel>
+        <Chemfuel>20</Chemfuel>
+        <ComponentIndustrial>4</ComponentIndustrial>
+        <Shell_AntigrainWarhead>2</Shell_AntigrainWarhead>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M61PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>BombSuper</damageDef>
+        <explosionRadius>49.9</explosionRadius>
+        <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <flyOverhead>true</flyOverhead>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+        <soundExplode>Explosion_GiantBomb</soundExplode>
+        <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+        <soundAmbient>MortarRound_Ambient</soundAmbient>
+        <shellingProps>
+          <damage>0.85</damage>
+        </shellingProps>
+        <suppressionFactor>3.0</suppressionFactor>
+        <dangerFactor>2.0</dangerFactor>
+        <speed>40</speed>
+      </projectile>
+    </value>
+  </Operation>
+
+</Patch>

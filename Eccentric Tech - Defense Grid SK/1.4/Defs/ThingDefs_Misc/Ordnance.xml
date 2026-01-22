@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- base ordnance -->
+  <ThingDef Name="EccentricDefenseGrid_BaseOrdnance" ParentName="ResourceBase" Class="EccentricDefenseGrid.OrdnanceDef" Abstract="True">
+    <thingClass>EccentricDefenseGrid.Ordnance</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>5</stackLimit>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>800</MarketValue>
+      <Mass>500.0</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5.0</DeteriorationRate>
+    </statBases>
+    <ordnance>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </ordnance>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+  <ThingDef Name="EccentricDefenseGrid_BaseMakeableOrdnance" ParentName="EccentricDefenseGrid_BaseOrdnance" Abstract="True">
+    <recipeMaker>
+      <workSkill>Crafting</workSkill>
+      <workAmount>2000</workAmount>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>FabricationBench</li>
+        <li MayRequire="Aelanna.EccentricTech.Core">EccentricNanoassembler</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Eccentric_DefenseGridArtillery</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- M36 PGM (high explosive) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>EccentricDefenseGrid_Ordnance_M36PGM</defName>
+    <label>M36 PGM (high explosive)</label>
+    <labelShort>M36 HE</labelShort>
+    <description>A precision-guided short-range anti-ground missile with a high-explosive warhead.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>100</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M36_Red</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>300</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Chemfuel>20</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M36PGM</projectile>
+      <effectRadius>4.9</effectRadius>
+      <uiColor>(191,69,53)</uiColor>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- M38 PGM (incendiary) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>EccentricDefenseGrid_Ordnance_M38PGM</defName>
+    <label>M38 PGM (incendiary)</label>
+    <labelShort>M38 Incendiary</labelShort>
+    <description>A precision-guided short-range anti-ground missile with a volatile incendiary warhead.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>200</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M38_Orange</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>325</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <Chemfuel>40</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M38PGM</projectile>
+      <effectRadius>4.9</effectRadius>
+      <uiColor>(239,175,91)</uiColor>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- M39 PGM (EMP) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>EccentricDefenseGrid_Ordnance_M39PGM</defName>
+    <label>M39 PGM (electromagnetic pulse)</label>
+    <labelShort>M39 EMP</labelShort>
+    <description>A precision-guided short-range anti-ground missile with an electromagnetic pulse warhead.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>300</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M39_Blue</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <Chemfuel>20</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M39PGM</projectile>
+      <effectRadius>9.9</effectRadius>
+      <uiColor>(70,156,222)</uiColor>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- M48 PGM (HEAT) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>EccentricDefenseGrid_Ordnance_M48PGM</defName>
+    <label>M48 PGM (high explosive anti-tank)</label>
+    <labelShort>M48 HEAT</labelShort>
+    <description>A precision-guided short-range anti-tank missile with a high explosive shaped charge warhead. It can actively track targets of sufficient mass but has a very small blast radius.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>400</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M48_Gray</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Chemfuel>20</Chemfuel>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M48PGM</projectile>
+      <effectRadius>1.9</effectRadius>
+      <uiColor>(135,135,135)</uiColor>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <activeTracking>true</activeTracking>
+      <antiTankTargeting>true</antiTankTargeting>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+    <storedConceptLearnOpportunity>EccentricDefenseGrid_TrackingMissiles</storedConceptLearnOpportunity>
+  </ThingDef>
+
+  <!-- M56 PGM (Shield) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef" MayRequire="Aelanna.EccentricTech.Core">
+    <defName>EccentricDefenseGrid_Ordnance_M56PGM</defName>
+    <label>M56 PGM (burnout shield)</label>
+    <labelShort>M56 Shield</labelShort>
+    <description>A precision-guided short-range missile with a burnout shield payload. Upon impact, it deploys a temporary generator that projects a wide-area shield and is intended to assist ground forces under heavy fire.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>500</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M56_Teal</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <Chemfuel>20</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Eccentric_HexCell>1</Eccentric_HexCell>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M56PGM</projectile>
+      <effectRadius>4.9</effectRadius>
+      <uiColor>(159,248,255)</uiColor>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- M61 PGM (antigrain) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>EccentricDefenseGrid_Ordnance_M61PGM</defName>
+    <label>M61 PGM (antigrain)</label>
+    <labelShort>M61 Antigrain</labelShort>
+    <description>A precision-guided short-range anti-ground missile with an antigrain warhead.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>600</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M61_Green</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2500</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Chemfuel>30</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Shell_AntigrainWarhead>2</Shell_AntigrainWarhead>
+    </costList>
+    <ordnance>
+      <projectile>EccentricDefenseGrid_Projectile_M61PGM</projectile>
+      <effectRadius>14.9</effectRadius>
+      <uiColor>(206,214,82)</uiColor>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>14.9</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <wickTicks>60~120</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

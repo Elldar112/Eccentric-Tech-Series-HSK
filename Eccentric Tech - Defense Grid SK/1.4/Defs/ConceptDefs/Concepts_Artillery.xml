@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>EccentricDefenseGrid_TrackingMissiles</defName>
+    <label>Tracking missiles</label>
+    <helpText>Active-tracking anti-tank missiles such as the M48 can do heavy damage to their targets but can only be fired after locking onto a target of sufficient size or mass. These missiles can only target mechanoids and vehicles with a minimum body size of 1.5 or organic targets with a minimum body size of 3.0.</helpText>
+  </ConceptDef>
+
+</Defs>
