@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Laser designator -->
+  <EffecterDef>
+    <defName>EccentricDefenseGrid_LaserDesignator</defName>
+    <children>
+      <li Class="EccentricProjectiles.SubEffecterDef">
+        <subEffecterClass>EccentricProjectiles.SubEffecter_Sustained</subEffecterClass>
+        <effects>
+          <li>Eccentric_DefenseGridLaserLine</li>
+          <li>Eccentric_DefenseGridLaserPulse</li>
+        </effects>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

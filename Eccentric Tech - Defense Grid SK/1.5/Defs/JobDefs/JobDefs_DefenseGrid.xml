@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Reload launcher -->
+  <JobDef>
+    <defName>EccentricDefenseGrid_ReloadMissileLauncher</defName>
+    <driverClass>EccentricDefenseGrid.JobDriver_LoadOrdnance</driverClass>
+    <reportString>loading TargetB into TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <!-- Unload launcher -->
+  <JobDef>
+    <defName>EccentricDefenseGrid_UnloadMissileLauncher</defName>
+    <driverClass>EccentricDefenseGrid.JobDriver_UnloadOrdnance</driverClass>
+    <reportString>unloading TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <!-- Designate target -->
+  <JobDef>
+    <defName>EccentricDefenseGrid_DesignateArtilleryTarget</defName>
+    <driverClass>EccentricDefenseGrid.JobDriver_DesignateTarget</driverClass>
+    <reportString>designating artillery target using TargetB.</reportString>
+    <suspendable>false</suspendable>
+  </JobDef>
+
+</Defs>

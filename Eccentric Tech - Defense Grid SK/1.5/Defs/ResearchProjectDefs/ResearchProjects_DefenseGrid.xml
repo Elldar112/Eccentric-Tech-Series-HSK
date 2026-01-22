@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>Eccentric_Tech</defName>
+    <label>Eccentric Tech</label>
+    <generalTitle>Eccentric Tech research</generalTitle>
+    <generalDescription>Unlock the advanced technology of The Eccentric.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_DefenseGridNetwork</defName>
+    <label>networked defenses</label>
+    <description>Learn the basics of building conduits to connect networked defense systems.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3.5</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_DefenseGridArtillery</defName>
+    <label>networked artillery</label>
+    <description>Build networked missile launchers and proximity sensor towers for close-range guided artillery support.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Eccentric_DefenseGridNetwork</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2.8</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_DefenseGridDesignators</defName>
+    <label>portable designators</label>
+    <description>Build field laser designators to direct missile artillery at extended range.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Eccentric_DefenseGridArtillery</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2.8</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Eccentric_DefenseGridShields</defName>
+    <label>networked shields</label>
+    <description>Build wide-area defensive shields using networked capacitors and heatsinks.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Eccentric_DefenseGridNetwork</li>
+      <li>ShieldBelt</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3.5</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef MayRequire="Aelanna.EccentricTech.Core">
+    <defName>Eccentric_DefenseGridShieldFabrication</defName>
+    <label>high-energy shield cores</label>
+    <description>Unlock the ability to build high-energy shield cores at the nanoassembler.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Eccentric_DefenseGridShields</li>
+      <li>Eccentric_HighDensityHex</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+      <li>EccentricAuroraCore</li>
+    </requiredResearchFacilities>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3.5</researchViewY>
+    <tab>Eccentric_Tech</tab>
+  </ResearchProjectDef>
+
+</Defs>

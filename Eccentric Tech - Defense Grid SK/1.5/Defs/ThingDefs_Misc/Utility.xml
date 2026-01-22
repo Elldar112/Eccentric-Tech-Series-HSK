@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ApparelNoQualityBase" Name="Eccentric_DefenseUtilityBase" Abstract="True">
+    <thingCategories>
+      <li>EccentricApparelUtility</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.2</Mass>
+      <Beauty>-3</Beauty>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Sellable</tradeability>
+    <smeltable>false</smeltable>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <ignoredByNonViolent>true</ignoredByNonViolent>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="Eccentric_DefenseUtilityBase">
+    <defName>Eccentric_ArtilleryDesignator</defName>
+    <label>remote artillery designator</label>
+    <description>A compact laser designator used to direct artillery strikes from local networked defense grids.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/LaserDesignator</texPath>
+      <drawSize>(0.7,0.7)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Eccentric_DefenseGridDesignators</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>FabricationBench</li>
+        <li MayRequire="Aelanna.EccentricTech.Core">EccentricNanoassembler</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <displayPriority>350</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="EccentricDefenseGrid.CompProperties_ArtilleryDesignator">
+        <verb>
+          <label>designate target</label>
+          <verbClass>EccentricDefenseGrid.Verb_RemoteDesignateArtillery</verbClass>
+          <hasStandardCommand>false</hasStandardCommand>
+          <range>44.9</range>
+          <warmupTime>3.0</warmupTime>
+          <warmupEffecter>EccentricDefenseGrid_LaserDesignator</warmupEffecter>
+          <defaultCooldownTime>0.5</defaultCooldownTime>
+          <soundAiming>Eccentric_ArtilleryDesignatorWarmup</soundAiming>
+          <soundCast>Eccentric_ArtilleryDesignatorComplete</soundCast>
+          <onlyManualCast>true</onlyManualCast>
+          <targetParams>
+            <canTargetLocations>true</canTargetLocations>
+          </targetParams>
+        </verb>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="EccentricDefenseGrid_BaseArtilleryProjectile" ParentName="BaseBullet" Abstract="True">
+    <thingClass>EccentricProjectiles.Projectile_ExplosiveStagedWithEffects</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M36</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <!-- M36 PGM (HE) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M36PGM</defName>
+    <label>M36 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M36_Red</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <explosionRadius>4.9</explosionRadius>
+      <speed>40</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <impactEffects>
+          <li>Eccentric_ArtilleryImpactDistortion</li>
+        </impactEffects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInCubic</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- M38 PGM (Incendiary) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M38PGM</defName>
+    <label>M38 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M38_Orange</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <explosionRadius>4.9</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.25</preExplosionSpawnChance>
+      <speed>40</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInCubic</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- M39 PGM (EMP) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M39PGM</defName>
+    <label>M39 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M39_Blue</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <explosionRadius>9.9</explosionRadius>
+      <speed>40</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <impactEffects>
+          <li>Eccentric_ArtilleryImpactDistortion</li>
+        </impactEffects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInCubic</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- M48 PGM (HEAT) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M48PGM</defName>
+    <label>M48 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M48_Gray</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Eccentric_BombCenterMass</damageDef>
+      <damageAmountBase>250</damageAmountBase>
+      <armorPenetrationBase>0.90</armorPenetrationBase>
+      <explosionRadius>1.9</explosionRadius>
+      <speed>40</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>14</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <activeTracking>true</activeTracking>
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <impactEffects>
+          <li>Eccentric_ArtilleryImpactDistortion</li>
+        </impactEffects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInQuad</positionFunction>
+            <arcFactor>12</arcFactor>
+            <arcFunction>EccentricDefenseGrid_TopDown</arcFunction>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+          <!--
+          <li>
+            <label>climbing</label>
+            <type>Cruise</type>
+            <speed>40</speed>
+            <positionOffset>(0,0,-4)</positionOffset>
+            <positionFunction>EaseInQuad</positionFunction>
+            <heightOffset>14</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+          <li>
+            <label>attacking</label>
+            <type>Terminal</type>
+            <duration>24</duration>
+            <heightFunction>EaseInQuad</heightFunction>
+          </li>
+          -->
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- M56 PGM (Shield) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M56PGM</defName>
+    <label>M56 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M56_Teal</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Eccentric_BluntExplosive</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <explosionRadius>0.5</explosionRadius>
+      <speed>40</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+      <postExplosionSpawnThingDef>Eccentric_StandaloneShieldGenerator</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInOutQuad</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- M61 PGM (Antigrain) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_Projectile_M61PGM</defName>
+    <label>M61 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M61_Green</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>BombSuper</damageDef>
+      <speed>40</speed>
+      <explosionRadius>14.9</explosionRadius>
+      <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <explosionEffect>GiantExplosion</explosionEffect>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <impactEffects>
+          <li>Eccentric_ArtilleryImpactImplosion</li>
+        </impactEffects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInCubic</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!--
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>EccentricDefenseGrid_M36NYAN</defName>
+    <label>M36 precision guided nyan cat</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_NYAN</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>150</damageAmountBase>
+      <explosionRadius>19.9</explosionRadius>
+      <speed>30</speed>
+      <shadowSize>0.6</shadowSize>
+      <arcHeightFactor>12</arcHeightFactor>
+      <flyOverhead>true</flyOverhead>
+      <soundAmbient>Eccentric_ArtilleryMissileNyan</soundAmbient>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileNyan</li>
+        </effects>
+        <stages>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>30</speed>
+            <positionFunction>EaseInQuad</positionFunction>
+            <arcFactor>12</arcFactor>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  -->
+</Defs>

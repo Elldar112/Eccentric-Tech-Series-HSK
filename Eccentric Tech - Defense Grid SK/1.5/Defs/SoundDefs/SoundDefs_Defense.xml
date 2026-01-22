@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Shield SFX -->
+  <SoundDef>
+    <defName>Eccentric_DefenseGridShieldStartup</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Shield_Charge</clipPath>
+          </li>
+        </grains>
+        <volumeRange>45~52</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Eccentric_DefenseGridShieldHit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Shield_Hit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~34</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Eccentric_DefenseGridShieldBreak</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Eccentric/DefenseGrid/Shield_Break</clipPath>
+          </li>
+        </grains>
+        <volumeRange>48~52</volumeRange>
+        <pitchRange>0.8940217~1.084783</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>
