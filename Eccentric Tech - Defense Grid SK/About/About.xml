@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Eccentric Tech - Defense Grid</name>
+	<name>Eccentric Tech - Defense Grid HSK</name>
 	<author>Aelanna</author>
   <packageId>Aelanna.EccentricTech.DefenseGrid</packageId>
   <description>Adds networked shield generators, laser-designated missile artillery batteries, and remote turret controllers for high-tech colony defense options.  HSK Conversion by Elldar.</description>
@@ -32,3 +32,4 @@
     <li>CETeam.CombatExtended</li>
   </loadAfter>
 </ModMetaData>
+
