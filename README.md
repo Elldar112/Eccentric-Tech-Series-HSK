@@ -1,5 +1,5 @@
 # **Eccentric Tech Series - HSK**
-Eccentric Tech Mod Series patched and rebalanced for **Hardcore SK** by Elldar
+Eccentric Tech Mod Series patched and rebalanced for **Hardcore SK** by Elldar.
 
 Original Mods: 
 
