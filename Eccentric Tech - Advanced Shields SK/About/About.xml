@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Eccentric Tech - Advanced Shields</name>
+  <name>Eccentric Tech - Advanced Shields< HSK/name>
   <author>Aelanna</author>
   <packageId>Aelanna.EccentricTech.AdvancedShields</packageId>
   <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
@@ -23,3 +23,4 @@
   </loadAfter>
   <description>Allows the creation of advanced shield belts. HSK Conversion by Elldar.</description>
 </ModMetaData>
+
