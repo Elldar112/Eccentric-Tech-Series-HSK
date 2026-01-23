@@ -2,38 +2,34 @@
 <Patch>
 
 <!-- Research -->
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef
-		[defName="Eccentric_ModulatedShields"
-		or defName="Eccentric_PhasedShields"
-		or defName="Eccentric_LayeredShields"]
-		/techLevel</xpath>
-		<value>
-		  <techLevel>Ultra</techLevel>
-		</value>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_ModulatedShields" or defName="Eccentric_LayeredShields"]</xpath>
 	</Operation>
-  
+	
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef
-		[defName="Eccentric_ModulatedShields"
-		or defName="Eccentric_PhasedShields"
-		or defName="Eccentric_LayeredShields"]
-		/requiredResearchFacilities</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/label</xpath>
 		<value>
-		  <requiredResearchFacilities>
-		  <li>MultiAnalyzer</li>
-		  <li>LabStation</li>
-		  <li>EccentricAuroraCore</li>
-		  </requiredResearchFacilities>
+		  <label>Advanced Shield Belts</label>
 		</value>
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef
-		[defName="Eccentric_ModulatedShields"
-		or defName="Eccentric_LayeredShields"]
-		/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/description</xpath>
+		<value>
+		  <description>Build Advanced Shield Belts, improved version of regular shield belt with extra capabilities.</description>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/techLevel</xpath>
+		<value>
+		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/prerequisites</xpath>
 		<value>
 		  <prerequisites>
 			<li>Eccentric_HighDensityHex</li>
@@ -41,19 +37,42 @@
 		  </prerequisites>
 		</value>
 	</Operation>
-  
+	
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef
-		[defName="Eccentric_ModulatedShields"
-		or defName="Eccentric_PhasedShields"
-		or defName="Eccentric_LayeredShields"]
-		/baseCost</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/baseCost</xpath>
 		<value>
-		  <baseCost>2500</baseCost>
+			<baseCost>6000</baseCost>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]/requiredResearchFacilities</xpath>
+		<value>
+			<requiredResearchFacilities>
+			  <li>MultiAnalyzer</li>
+			  <li>LabStation</li>
+			  <li>EccentricAuroraCore</li>
+			</requiredResearchFacilities>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_PhasedShields"]</xpath>
+		<value>
+			<techprintCount>1</techprintCount>
+			<techprintCommonality>2</techprintCommonality>
+			<heldByFactionCategoryTags>
+				<li>Empire</li>
+				<li>Outlander</li>
+			</heldByFactionCategoryTags>
 		</value>
 	</Operation>
 	
 <!-- Items -->
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/recipeMaker/researchPrerequisite</xpath>
+	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/recipeMaker/recipeUsers</xpath>
@@ -77,6 +96,13 @@
 		<xpath>Defs/ThingDef[@Name="EccentricShieldBeltBase"]/techLevel</xpath>
 		<value>
 		  <techLevel>Ultra</techLevel>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_LayeredShieldBelt" or defName="Eccentric_ModulatedShieldBelt"]/recipeMaker/researchPrerequisite</xpath>
+		<value>
+		  <researchPrerequisite>Eccentric_PhasedShields</researchPrerequisite>
 		</value>
 	</Operation>
 	
@@ -106,6 +132,15 @@
 			<Microchips>1</Microchips>
 			<Eccentric_HexCell>1</Eccentric_HexCell>
 		</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_PhasedShieldBelt"]</xpath>
+		<value>
+		<recipeMaker>
+		  <researchPrerequisite>Eccentric_PhasedShields</researchPrerequisite>
+		</recipeMaker>  
 		</value>
 	</Operation>
 	
