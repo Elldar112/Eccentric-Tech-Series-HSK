@@ -34,18 +34,70 @@
 		  </requiredResearchFacilities>
 		</value>
 	</Operation>
-  
-  	<Operation Class="PatchOperationReplace">
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridNetwork"]</xpath>
+		<value>
+		<prerequisites>
+			<li>Eccentric_Core</li>
+		</prerequisites>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridShieldFabrication"]/prerequisites</xpath>
+		<value>
+		<prerequisites>
+			<li>Eccentric_HighDensityHex</li>
+		</prerequisites>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridShields"]/prerequisites</xpath>
+		<value>
+		<prerequisites>
+			<li>Eccentric_DefenseGridShieldFabrication</li>
+		</prerequisites>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridShields"]</xpath>
+		<value>
+			<techprintCount>3</techprintCount>
+			<techprintCommonality>2</techprintCommonality>
+			<heldByFactionCategoryTags>
+				<li>Empire</li>
+				<li>Outlander</li>
+			</heldByFactionCategoryTags>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridArtillery"]</xpath>
+		<value>
+			<techprintCount>3</techprintCount>
+			<techprintCommonality>2</techprintCommonality>
+			<heldByFactionCategoryTags>
+				<li>Empire</li>
+				<li>Outlander</li>
+			</heldByFactionCategoryTags>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridArtillery" or defName="Eccentric_DefenseGridShields"]/baseCost</xpath>
 		<value>
-		  <baseCost>3500</baseCost>
+		  <baseCost>8000</baseCost>
 		</value>
 	</Operation>
 	
   	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Eccentric_DefenseGridShieldFabrication" or defName="Eccentric_DefenseGridDesignators"]/baseCost</xpath>
 		<value>
-		  <baseCost>1800</baseCost>
+		  <baseCost>3200</baseCost>
 		</value>
 	</Operation>
 	
@@ -196,19 +248,60 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+	<!-- <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
 		<xpath>Defs/ThingDef[defName="Apparel_PackBroadshield"]/costList</xpath>
 		<value>
 			<costList>
-				<Eccentric_HexCell>2</Eccentric_HexCell>
+				<Eccentric_HexCell>8</Eccentric_HexCell>
 				<Electronics>4</Electronics>
 				<Hexcell>6</Hexcell>
 				<ComponentIndustrial>2</ComponentIndustrial>
 			</costList>
 		</value>
-	</Operation>
+	</Operation> -->
 	
 <!-- Buildings -->
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[@Name="Eccentric_DefenseGridBuildingBase"]/constructEffect</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseGridConsole"
+		or defName="Eccentric_DefenseTurretController"
+		or defName="Eccentric_ArtilleryVerticalMissileLauncher"
+		or defName="Eccentric_ArtillerySensorTower"
+		or defName="Eccentric_ShieldGenerator"
+		or defName="Eccentric_ShieldCapacitor"
+		or defName="Eccentric_ShieldHeatsink"
+		or defName="Eccentric_ShieldProjector"
+		or defName="Eccentric_ShieldProjectorWide"
+		or defName="Eccentric_ShieldProjector3x3Wide"]
+		/constructionSkillPrerequisite</xpath>
+		<value>
+			<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseGridConsole"
+		or defName="Eccentric_DefenseTurretController"
+		or defName="Eccentric_ArtilleryVerticalMissileLauncher"
+		or defName="Eccentric_ArtillerySensorTower"
+		or defName="Eccentric_ShieldGenerator"
+		or defName="Eccentric_ShieldCapacitor"
+		or defName="Eccentric_ShieldHeatsink"
+		or defName="Eccentric_ShieldProjector"
+		or defName="Eccentric_ShieldProjectorWide"
+		or defName="Eccentric_ShieldProjector3x3Wide"]</xpath>
+		<value>
+			<building>
+				<paintable>true</paintable>
+			</building>
+		</value>
+	</Operation>
+	
+	<!-- Grid Conduits -->
 	
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Eccentric_DefenseConduit"]/costList</xpath>
@@ -227,6 +320,418 @@
 			<costList>
 				<ConcreteResource>2</ConcreteResource>
 			</costList>
+		</value>
+	</Operation>
+	
+	<!-- Defense Grid Console -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseGridConsole"]/costList</xpath>
+		<value>
+			<costList>
+				<ComponentIndustrial>5</ComponentIndustrial>
+				<Glass>25</Glass>
+				<Electronics>2</Electronics>
+				<Microchips>1</Microchips>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseGridConsole"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>75</costStuffCount>
+		</value>
+	</Operation>
+	
+	<!-- Remote Turret Controller -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseTurretController"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HexCell>1</Eccentric_HexCell>
+				<ComponentUltra>5</ComponentUltra>
+				<AdvMechanism>2</AdvMechanism>
+				<RobotParts>35</RobotParts>
+				<Microchips>2</Microchips>
+				<DriveActuator>1</DriveActuator>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseTurretController"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>125</costStuffCount>
+		</value>
+	</Operation>
+	
+	<!-- Proximity Sensor Tower -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryVerticalMissileLauncher"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HexCell>2</Eccentric_HexCell>
+				<TargetingChip>1</TargetingChip>
+				<ALC>1</ALC>
+				<ComponentUltra>5</ComponentUltra>
+				<AdvMechanism>8</AdvMechanism>
+				<RobotParts>75</RobotParts>
+				<Microchips>4</Microchips>
+			</costList>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtilleryVerticalMissileLauncher"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>350</costStuffCount>
+		</value>
+	</Operation>
+	
+	<!-- Proximity Sensor Tower -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtillerySensorTower"]/costList</xpath>
+		<value>
+			<costList>
+				<ComponentSpacer>5</ComponentSpacer>
+				<Plastic>10</Plastic>
+				<ElectronicComponents>4</ElectronicComponents>
+				<Electronics>2</Electronics>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ArtillerySensorTower"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>120</costStuffCount>
+		</value>
+	</Operation>
+	
+	<!-- Shield generator -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldGenerator"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HexCell>20</Eccentric_HexCell>
+				<ComponentUltra>15</ComponentUltra>
+				<AdvMechanism>10</AdvMechanism>
+				<MagneticMaterial>80</MagneticMaterial>
+				<Electronics>4</Electronics>
+				<Microchips>8</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldGenerator"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>320</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+		<value>
+			<basePowerConsumption>12500</basePowerConsumption>
+		</value>
+	</Operation>
+	
+	<!-- Shield capacitor -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HexCell>8</Eccentric_HexCell>
+				<Plastic>20</Plastic>
+				<ComponentUltra>4</ComponentUltra>
+				<AdvMechanism>2</AdvMechanism>
+				<MagneticMaterial>20</MagneticMaterial>
+				<Microchips>2</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>240</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+		<value>
+			<basePowerConsumption>4000</basePowerConsumption>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor"]/energyCapacity</xpath>
+		<value>
+			<energyCapacity>650</energyCapacity>
+			<!-- <energyGainPerHour>500</energyGainPerHour>
+			<energyDrainPerHour>2000</energyDrainPerHour>
+			<energyRechargeDelay>300</energyRechargeDelay> -->
+		</value>
+	</Operation>
+	
+	<!-- Shield heatsink -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldHeatsink"]/costList</xpath>
+		<value>
+			<costList>
+				<ComponentSpacer>5</ComponentSpacer>
+				<Mechanism>10</Mechanism>
+				<CupronickelAlloy>140</CupronickelAlloy>
+				<ElectronicComponents>4</ElectronicComponents>
+				<Electronics>2</Electronics>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldHeatsink"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>240</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldHeatsink"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseHeatsink"]/heatCapacity</xpath>
+		<value>
+			<heatCapacity>2400</heatCapacity>
+			<!-- <heatDrainPerHour>250</heatDrainPerHour>
+			<overheatEffects>
+			  <li>Eccentric_DefenseGridHeatDistortion</li>
+			</overheatEffects> -->
+		</value>
+	</Operation>
+	
+	<!-- Shield projector (1x1) -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+				<Eccentric_HexCell>4</Eccentric_HexCell>
+				<ComponentUltra>6</ComponentUltra>
+				<AdvMechanism>4</AdvMechanism>
+				<MagneticMaterial>60</MagneticMaterial>
+				<AlnicoAlloy>120</AlnicoAlloy>
+				<Electronics>4</Electronics>
+				<Microchips>2</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>180</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>8000</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
+		<value>
+			<radius>12.9</radius>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
+		<value>
+			<radiusRange>8~12</radiusRange>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(1.8,1.8)</drawSize>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/graphicData/shadowData/volume</xpath>
+		<value>
+			<volume>(1.13,0.8,1.09)</volume>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/size</xpath>
+		<value>
+			<size>(1,1)</size>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_ProjectorOverlay"]/overlayDrawSize</xpath>
+		<value>
+			<overlayDrawSize>(1.8,0,1.8)</overlayDrawSize>
+		</value>
+	</Operation>
+	
+	<!-- Shield projector (2x2) -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HighEnergyShieldCore>3</Eccentric_HighEnergyShieldCore>
+				<Eccentric_HexCell>12</Eccentric_HexCell>
+				<ComponentUltra>16</ComponentUltra>
+				<AdvMechanism>8</AdvMechanism>
+				<MagneticMaterial>80</MagneticMaterial>
+				<AlnicoAlloy>200</AlnicoAlloy>
+				<Electronics>4</Electronics>
+				<Microchips>2</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>360</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>24000</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
+		<value>
+			<radius>20.9</radius>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
+		<value>
+			<radiusRange>10~40</radiusRange>
+		</value>
+	</Operation>
+	
+	<!-- Shield projector (3x3) -->
+	
+	<!-- <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector3x3Wide"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HighEnergyShieldCore>3</Eccentric_HighEnergyShieldCore>
+				<Eccentric_HexCell>12</Eccentric_HexCell>
+				<ComponentUltra>16</ComponentUltra>
+				<AdvMechanism>8</AdvMechanism>
+				<MagneticMaterial>90</MagneticMaterial>
+				<AlnicoAlloy>220</AlnicoAlloy>
+				<Electronics>4</Electronics>
+				<Microchips>2</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector3x3Wide"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>400</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector3x3Wide"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>28000</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
+		<value>
+			<radius>30.9</radius>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
+		<value>
+			<radiusRange>12~60</radiusRange>
+		</value>
+	</Operation> -->
+	
+	<!-- Standalone shield generator (deployable) -->
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_StandaloneShieldGenerator"]/statBases/MaxHitPoints</xpath>
+		<value>
+			<MaxHitPoints>500</MaxHitPoints>
 		</value>
 	</Operation>
 	

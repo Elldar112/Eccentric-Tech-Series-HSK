@@ -3,7 +3,7 @@
 
  <!-- Parent -->
  
-	<Operation Class="PatchOperationAdd">
+	<!-- <Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[@Name="EccentricDefenseGrid_BaseMakeableOrdnance"]</xpath>
 		<value>
 			<stuffCategories>
@@ -11,7 +11,7 @@
 			</stuffCategories>
 			<costStuffCount>40</costStuffCount>
 		</value>
-	</Operation>
+	</Operation> -->
 
   <!-- M36 PGM (high explosive) -->
 
@@ -103,5 +103,36 @@
 			</costList>
 		</value>	
 	</Operation>
+	
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Ordnance_M61PGM"]/ordnance/effectRadius</xpath>
+    <value>
+      <effectRadius>24.9</effectRadius>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="EccentricDefenseGrid_Projectile_M61PGM"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>BombSuper</damageDef>
+        <explosionRadius>24.9</explosionRadius>
+        <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <flyOverhead>true</flyOverhead>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+        <soundExplode>Explosion_GiantBomb</soundExplode>
+        <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+        <soundAmbient>MortarRound_Ambient</soundAmbient>
+        <shellingProps>
+          <damage>0.85</damage>
+        </shellingProps>
+        <suppressionFactor>3.0</suppressionFactor>
+        <dangerFactor>2.0</dangerFactor>
+        <speed>40</speed>
+      </projectile>
+    </value>
+  </Operation>
 	
 </Patch>

@@ -3,7 +3,7 @@
 	<name>Eccentric Tech - Defense Grid</name>
 	<author>Aelanna</author>
   <packageId>Aelanna.EccentricTech.DefenseGrid</packageId>
-  <description>Adds networked shield generators, laser-designated missile artillery batteries, and remote turret controllers for high-tech colony defense options.</description>
+  <description>Adds networked shield generators, laser-designated missile artillery batteries, and remote turret controllers for high-tech colony defense options.  HSK Conversion by Elldar.</description>
   <modVersion>1.4.1</modVersion>
   <supportedVersions>
     <li>1.4</li>
@@ -16,8 +16,18 @@
       <displayName>Harmony</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
     </li>
+	<li>
+      <packageId>Aelanna.EccentricTech.Core</packageId>
+      <displayName>Eccentric Tech - Core</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2552623545</steamWorkshopUrl>
+    </li>
+	<li>
+	<packageId>Ludeon.RimWorld.Royalty</packageId>
+      <displayName>Royalty</displayName>
+	</li>  
   </modDependencies>
   <loadAfter>
+	<li>Ludeon.RimWorld.Royalty</li>
     <li>Aelanna.EccentricTech.Core</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
