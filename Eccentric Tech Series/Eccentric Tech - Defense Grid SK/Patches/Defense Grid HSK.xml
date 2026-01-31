@@ -618,7 +618,61 @@
 		</value>
 	</Operation>
 	
-	<!-- Shield projector (2x2) -->
+	<!-- Shield Projector 2x2 -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/costList</xpath>
+		<value>
+			<costList>
+				<Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
+				<Eccentric_HexCell>4</Eccentric_HexCell>
+				<ComponentUltra>6</ComponentUltra>
+				<AdvMechanism>4</AdvMechanism>
+				<MagneticMaterial>60</MagneticMaterial>
+				<AlnicoAlloy>120</AlnicoAlloy>
+				<Electronics>4</Electronics>
+				<Microchips>2</Microchips>
+			</costList>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]</xpath>
+		<value>
+			<stuffCategories>
+				<li>SolidMetallic</li>
+			</stuffCategories>
+			<costStuffCount>200</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>8000</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
+		<value>
+			<radius>12.9</radius>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
+		<value>
+			<radiusRange>8~12</radiusRange>
+		</value>
+	</Operation>
+	
+	<!-- Shield projector Wide (2x2) -->
 	
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/costList</xpath>
@@ -672,9 +726,9 @@
 		</value>
 	</Operation>
 	
-	<!-- Shield projector (3x3) -->
+	<!-- Shield projector Wide (3x3) -->
 	
-	<!-- <Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector3x3Wide"]/costList</xpath>
 		<value>
 			<costList>
@@ -682,8 +736,8 @@
 				<Eccentric_HexCell>12</Eccentric_HexCell>
 				<ComponentUltra>16</ComponentUltra>
 				<AdvMechanism>8</AdvMechanism>
-				<MagneticMaterial>90</MagneticMaterial>
-				<AlnicoAlloy>220</AlnicoAlloy>
+				<MagneticMaterial>80</MagneticMaterial>
+				<AlnicoAlloy>200</AlnicoAlloy>
 				<Electronics>4</Electronics>
 				<Microchips>2</Microchips>
 			</costList>
@@ -715,16 +769,16 @@
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
 		<value>
-			<radius>30.9</radius>
+			<radius>20.9</radius>
 		</value>
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
 		<value>
-			<radiusRange>12~60</radiusRange>
+			<radiusRange>10~40</radiusRange>
 		</value>
-	</Operation> -->
+	</Operation>
 	
 	<!-- Standalone shield generator (deployable) -->
 	
