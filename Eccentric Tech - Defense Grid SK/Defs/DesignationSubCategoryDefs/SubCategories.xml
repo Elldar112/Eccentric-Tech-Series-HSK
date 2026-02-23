@@ -8,6 +8,7 @@
 		<defNames>
 			<li>Eccentric_ShieldGenerator</li>
 			<li>Eccentric_ShieldProjector</li>
+			<li>Eccentric_ShieldProjector2x2</li>
 			<li>Eccentric_ShieldProjectorWide</li>
 			<li>Eccentric_ShieldProjector3x3Wide</li>
 			<li>Eccentric_ShieldCapacitor</li>
