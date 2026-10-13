@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Сенсорная башня приближения -->
+  <Eccentric_ArtillerySensorTower.label>башня датчиков приближения</Eccentric_ArtillerySensorTower.label>
+  <Eccentric_ArtillerySensorTower.description>Сложный сенсорный комплекс, позволяющий дистанционно наводить управляемые боеприпасы при подключении к оборонительной сети. Ракетные установки в подключённой сети можно напрямую наводить на цели в радиусе действия сенсорной башни с центральных консолей.</Eccentric_ArtillerySensorTower.description>
+
+  <!-- Вертикальная пусковая установка -->
+  <Eccentric_ArtilleryVerticalMissileLauncher.label>вертикальная пусковая установка</Eccentric_ArtilleryVerticalMissileLauncher.label>
+  <Eccentric_ArtilleryVerticalMissileLauncher.description>Компактная вертикальная пусковая установка, созданная на основе модулей для военных звёздных кораблей. Эта настраиваемая установка может запускаться дистанционно и принимает конечное наведение от различных сетевых устройств. Она использует систему мягкого запуска, которая выбрасывает ракету до воспламенения двигателя, минимизируя повреждения установки и позволяя быстро её перезаряжать.</Eccentric_ArtilleryVerticalMissileLauncher.description>
+
+</LanguageData>

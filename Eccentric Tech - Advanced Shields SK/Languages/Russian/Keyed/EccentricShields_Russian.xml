@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Eccentric_ShieldAllowsRangedAttacks>Разрешает дальние атаки</Eccentric_ShieldAllowsRangedAttacks>
+  <Eccentric_ShieldAllowsRangedAttacksDesc>Можно ли использовать дальние атаки, пока эта одежда надета и активна.</Eccentric_ShieldAllowsRangedAttacksDesc>
+
+  <Eccentric_ShieldTipPhased>Персональный щит, останавливающий входящие дальние снаряды. Имеет более высокую начальную ёмкость, чем стандартный пояс-щит, и быстро перезаряжается после разрушения, но не может перезаряжаться или восстанавливаться под прямым огнём.</Eccentric_ShieldTipPhased>
+
+</LanguageData>

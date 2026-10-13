@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Eccentric_DefenseGridNetwork.label>сетевые системы обороны</Eccentric_DefenseGridNetwork.label>
+  <Eccentric_DefenseGridNetwork.description>Изучите основы строительства каналов для соединения сетевых оборонительных систем.</Eccentric_DefenseGridNetwork.description>
+
+  <Eccentric_DefenseGridTurrets.label>сетевые турели</Eccentric_DefenseGridTurrets.label>
+  <Eccentric_DefenseGridTurrets.description>Стройте сетевые корабельные турели для точечной обороны.</Eccentric_DefenseGridTurrets.description>
+
+  <Eccentric_DefenseGridArtillery.label>сетевая артиллерия</Eccentric_DefenseGridArtillery.label>
+  <Eccentric_DefenseGridArtillery.description>Стройте сетевые ракетные установки и датчики приближения для управляемой артиллерийской поддержки на близкой дистанции.</Eccentric_DefenseGridArtillery.description>
+
+  <Eccentric_DefenseGridDesignators.label>портативные целеуказатели</Eccentric_DefenseGridDesignators.label>
+  <Eccentric_DefenseGridDesignators.description>Создавайте полевые лазерные целеуказатели для наведения ракетной артиллерии на увеличенной дистанции.</Eccentric_DefenseGridDesignators.description>
+
+  <Eccentric_DefenseGridShields.label>сетевые щиты</Eccentric_DefenseGridShields.label>
+  <Eccentric_DefenseGridShields.description>Стройте широкозонные оборонительные щиты, используя сетевые конденсаторы и радиаторы.</Eccentric_DefenseGridShields.description>
+
+  <Eccentric_DefenseGridShieldFabrication.label>высокоэнергетические ядра щитов</Eccentric_DefenseGridShieldFabrication.label>
+  <Eccentric_DefenseGridShieldFabrication.description>Откройте возможность создавать высокоэнергетические ядра щитов на наносборщике.</Eccentric_DefenseGridShieldFabrication.description>
+
+</LanguageData>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_StatusNoNetworks>Нет сетей в радиусе действия...</EccentricDefenseGrid_StatusNoNetworks>
+
+  <EccentricDefenseGrid_StatusAmount>{0} / {1}</EccentricDefenseGrid_StatusAmount>
+
+  <EccentricDefenseGrid_StatusEnergyTotal>Общая энергия системы</EccentricDefenseGrid_StatusEnergyTotal>
+  <EccentricDefenseGrid_StatusEnergyCount>Конденсаторы: {0}</EccentricDefenseGrid_StatusEnergyCount>
+  <EccentricDefenseGrid_StatusEnergyDesc>Общее количество энергии щита, доступной этой сети. Перехват снарядов расходует энергию, и если вся энергия будет израсходована, щит рухнет.</EccentricDefenseGrid_StatusEnergyDesc>
+  <EccentricDefenseGrid_StatusEnergyAction>Нажмите, чтобы показать или скрыть сетку конденсаторов.</EccentricDefenseGrid_StatusEnergyAction>
+
+  <EccentricDefenseGrid_StatusHeatTotal>Общий нагрев системы</EccentricDefenseGrid_StatusHeatTotal>
+  <EccentricDefenseGrid_StatusHeatCount>Радиаторы: {0}</EccentricDefenseGrid_StatusHeatCount>
+  <EccentricDefenseGrid_StatusHeatDesc>Общее количество тепла в этой сети. Перехват снарядов генерирует тепло, и если нагрев системы слишком высок, генераторы могут перегреться и выйти из строя, пока нагрев не снизится.</EccentricDefenseGrid_StatusHeatDesc>
+  <EccentricDefenseGrid_StatusHeatAction>Нажмите, чтобы показать или скрыть сетку радиаторов.</EccentricDefenseGrid_StatusHeatAction>
+
+  <EccentricDefenseGrid_Color>Изменить цвет</EccentricDefenseGrid_Color>
+  <EccentricDefenseGrid_ColorDesc>Изменяет цвет этого здания. Изменение чисто визуальное и не влияет на функциональность.</EccentricDefenseGrid_ColorDesc>
+  <EccentricDefenseGrid_ColorDefault>По умолчанию</EccentricDefenseGrid_ColorDefault>
+  <EccentricDefenseGrid_ColorRedLabel>К: {0}</EccentricDefenseGrid_ColorRedLabel>
+  <EccentricDefenseGrid_ColorGreenLabel>З: {0}</EccentricDefenseGrid_ColorGreenLabel>
+  <EccentricDefenseGrid_ColorBlueLabel>С: {0}</EccentricDefenseGrid_ColorBlueLabel>
+  <EccentricDefenseGrid_ColorAlphaLabel>П: {0}</EccentricDefenseGrid_ColorAlphaLabel>
+
+  <EccentricDefenseGrid_ColorCopy>Копировать цвет</EccentricDefenseGrid_ColorCopy>
+  <EccentricDefenseGrid_ColorCopyDesc>Скопировать цвет этого здания, чтобы вставить его другим зданиям.</EccentricDefenseGrid_ColorCopyDesc>
+
+  <EccentricDefenseGrid_ColorPaste>Вставить цвет</EccentricDefenseGrid_ColorPaste>
+  <EccentricDefenseGrid_ColorPasteDesc>Вставить скопированный цвет на это здание.</EccentricDefenseGrid_ColorPasteDesc>
+
+  <EccentricDefenseGrid_ColorClear>Очистить</EccentricDefenseGrid_ColorClear>
+  <EccentricDefenseGrid_ColorClearDesc>Очистить скопированный цвет из буфера обмена.</EccentricDefenseGrid_ColorClearDesc>
+
+  <EccentricDefenseGrid_DismantleFor>Разобрать на {0}</EccentricDefenseGrid_DismantleFor>
+  <EccentricDefenseGrid_DismantleSkillReq>Разобрать на {0} (требуется {1} {2})</EccentricDefenseGrid_DismantleSkillReq>
+
+</LanguageData>

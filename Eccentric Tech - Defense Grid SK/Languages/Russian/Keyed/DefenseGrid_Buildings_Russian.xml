@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_CapacitorInspect>Конденсатор щита: {0}/{1} ({2}%)</EccentricDefenseGrid_CapacitorInspect>
+  <EccentricDefenseGrid_HeatsinkInspect>Нагрев: {0}/{1} ({2}%, {3})</EccentricDefenseGrid_HeatsinkInspect>
+
+  <EccentricDefenseGrid_GeneratorShutdown>{0} отключён из-за нехватки энергии!</EccentricDefenseGrid_GeneratorShutdown>
+  <EccentricDefenseGrid_GeneratorOverload>{0} отключён из-за термической перегрузки!</EccentricDefenseGrid_GeneratorOverload>
+
+  <EccentricDefenseGrid_PlaceConduitExists>Невозможно разместить канал: канал или его план уже существует.</EccentricDefenseGrid_PlaceConduitExists>
+
+  <EccentricDefenseGrid_TurretNotConnected>Не подключён к турели</EccentricDefenseGrid_TurretNotConnected>
+  <EccentricDefenseGrid_TurretConnectedToUnmanned>Подключён к: {0} (без оператора)</EccentricDefenseGrid_TurretConnectedToUnmanned>
+  <EccentricDefenseGrid_TurretConnectedToManned>Подключён к: {0} (с оператором)</EccentricDefenseGrid_TurretConnectedToManned>
+
+  <EccentricDefenseGrid_DesignatorDeconstructConduit>Демонтировать каналы</EccentricDefenseGrid_DesignatorDeconstructConduit>
+  <EccentricDefenseGrid_DesignatorDeconstructConduitDesc>Демонтировать каналы оборонительной сети и вернуть часть их ресурсов.</EccentricDefenseGrid_DesignatorDeconstructConduitDesc>
+
+</LanguageData>

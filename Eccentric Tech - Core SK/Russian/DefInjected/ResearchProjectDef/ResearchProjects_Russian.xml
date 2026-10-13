@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Вкладка исследований -->
+  <Eccentric_Tech.label>Технологии Эксцентрики</Eccentric_Tech.label>
+  <Eccentric_Tech.generalTitle>Исследования Эксцентрики</Eccentric_Tech.generalTitle>
+  <Eccentric_Tech.generalDescription>Откройте передовые технологии Эксцентрики.</Eccentric_Tech.generalDescription>
+
+  <!-- Ядро «Аврора» -->
+  <Eccentric_Core.label>ядро «Аврора»</Eccentric_Core.label>
+  <Eccentric_Core.description>Постройте корпус для ядра личности «Авроры», что позволит расшифровать её базу технических данных.</Eccentric_Core.description>
+
+  <!-- Нанофабрикация -->
+  <Eccentric_NanoFabrication.label>нанофабрикация</Eccentric_NanoFabrication.label>
+  <Eccentric_NanoFabrication.description>Постройте фабрикаторы, способные производить и собирать наноразмерные «умные» материалы и компоненты.</Eccentric_NanoFabrication.description>
+
+  <!-- Высокоплотные гекс-ячейки -->
+  <Eccentric_HighDensityHex.label>высокоплотные гекс-ячейки</Eccentric_HighDensityHex.label>
+  <Eccentric_HighDensityHex.description>Производите высокоплотные микро-конденсаторы повышенной ёмкости, способные питать передовое электротермическое оружие и «умную» одежду из наноткани.</Eccentric_HighDensityHex.description>
+
+</LanguageData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Ядро «Аврора» -->
+  <EccentricAuroraCore.label>Ядро «Аврора»</EccentricAuroraCore.label>
+  <EccentricAuroraCore.description>Мейнфрейм ИИ, содержащий реконструкцию ядра личности «Авроры». Внутри хранится зашифрованная база данных передовых технологий Эксцентрики. При подключении к высокотехнологичному исследовательскому столу позволяет воспроизводить и производить технологии Эксцентрики.\n\nБудучи военным корабельным ИИ, «Аврора» способна подключаться к сетям обороны и автоматически управлять конфигурациями щитов. Если установить её на гравитационный корабль с работающей пилотской консолью, она также сможет самостоятельно управлять простыми гравитационными кораблями без риска аварий.</EccentricAuroraCore.description>
+
+  <!-- Нанофабрикатор -->
+  <EccentricNanofabricator.label>нанофабрикатор</EccentricNanofabricator.label>
+  <EccentricNanofabricator.description>Передовой производственный верстак для создания материалов Эксцентрики.</EccentricNanofabricator.description>
+
+  <!-- Наносборщик -->
+  <EccentricNanoassembler.label>наносборщик</EccentricNanoassembler.label>
+  <EccentricNanoassembler.description>Передовой производственный стол для сборки оружия, «умной» одежды и снаряжения Эксцентрики.</EccentricNanoassembler.description>
+
+</LanguageData>

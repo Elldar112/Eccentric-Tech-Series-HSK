@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <SubCategory_DefenseGrid.label>Щиты оборонительной сети</SubCategory_DefenseGrid.label>
+  <SubCategory_DefenseGrid.description>Система оборонительных генераторов щитов для вашей колонии.</SubCategory_DefenseGrid.description>
+
+  <SubCategory_DefenseGridArtillery.label>Артиллерия и турели оборонительной сети</SubCategory_DefenseGridArtillery.label>
+  <SubCategory_DefenseGridArtillery.description>Управляемая ИИ артиллерийская и турельная сеть для вашей колонии.</SubCategory_DefenseGridArtillery.description>
+
+  <SubCategory_DefenseGridConduits.label>Каналы оборонительной сети</SubCategory_DefenseGridConduits.label>
+  <SubCategory_DefenseGridConduits.description>Соединяет систему оборонительной сети для вашей колонии.</SubCategory_DefenseGridConduits.description>
+
+</LanguageData>

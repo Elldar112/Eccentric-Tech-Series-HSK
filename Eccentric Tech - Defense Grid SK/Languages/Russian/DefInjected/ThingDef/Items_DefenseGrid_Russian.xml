@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Ядро щита -->
+  <Eccentric_HighEnergyShieldCore.label>высокоэнергетическое ядро щита</Eccentric_HighEnergyShieldCore.label>
+  <Eccentric_HighEnergyShieldCore.description>Критически важный компонент для широкозонных оборонительных щитов. Высокоэнергетические ядра щитов необходимы для строительства сетевых генераторов щитов, таких как используемые на военных звёздных кораблях или в высокотехнологичной обороне колоний. Эти сложные устройства можно изготовить только на наноразмерных производственных мощностях, поэтому на мирах Пограничья они встречаются крайне редко.\n\nВысокоэнергетические ядра щитов можно получить, выполняя задания для дружественных фракций, купить у торговцев экзотическими товарами или изготовить на наносборщиках. Также можно извлечь одно ядро, разобрав генератор щита гравитационного корабля.</Eccentric_HighEnergyShieldCore.description>
+
+  <!-- Боеприпасы -->
+  <EccentricDefenseGrid_Ordnance_M36PGM.label>M36 PGM (фугасный)</EccentricDefenseGrid_Ordnance_M36PGM.label>
+  <EccentricDefenseGrid_Ordnance_M36PGM.description>Высокоточная управляемая ракета малой дальности класса «земля-земля» с фугасной боеголовкой.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M36PGM.description>
+
+  <EccentricDefenseGrid_Ordnance_M38PGM.label>M38 PGM (зажигательный)</EccentricDefenseGrid_Ordnance_M38PGM.label>
+  <EccentricDefenseGrid_Ordnance_M38PGM.description>Высокоточная управляемая ракета малой дальности класса «земля-земля» с нестабильной зажигательной боеголовкой.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M38PGM.description>
+
+  <EccentricDefenseGrid_Ordnance_M39PGM.label>M39 PGM (электромагнитный импульс)</EccentricDefenseGrid_Ordnance_M39PGM.label>
+  <EccentricDefenseGrid_Ordnance_M39PGM.description>Высокоточная управляемая ракета малой дальности класса «земля-земля» с боеголовкой электромагнитного импульса.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M39PGM.description>
+
+  <EccentricDefenseGrid_Ordnance_M48PGM.label>M48 PGM (противотанковый кумулятивный)</EccentricDefenseGrid_Ordnance_M48PGM.label>
+  <EccentricDefenseGrid_Ordnance_M48PGM.description>Высокоточная управляемая противотанковая ракета малой дальности с кумулятивной боеголовкой. Способна активно отслеживать цели достаточной массы, но имеет очень малый радиус взрыва.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M48PGM.description>
+
+  <EccentricDefenseGrid_Ordnance_M56PGM.label>M56 PGM (щит выгорания)</EccentricDefenseGrid_Ordnance_M56PGM.label>
+  <EccentricDefenseGrid_Ordnance_M56PGM.description>Высокоточная управляемая ракета малой дальности с полезной нагрузкой «щит выгорания». При попадании разворачивает временный генератор, проецирующий широкозонный щит, и предназначена для поддержки наземных сил под плотным огнём.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M56PGM.description>
+
+  <EccentricDefenseGrid_Ordnance_M61PGM.label>M61 PGM (антиматерия)</EccentricDefenseGrid_Ordnance_M61PGM.label>
+  <EccentricDefenseGrid_Ordnance_M61PGM.description>Высокоточная управляемая ракета малой дальности класса «земля-земля» с боеголовкой антиматерии.\n\nПредназначена для загрузки в вертикальные пусковые установки военных звёздных кораблей и требует захвата цели для запуска.</EccentricDefenseGrid_Ordnance_M61PGM.description>
+
+  <!-- Дистанционный артиллерийский целеуказатель -->
+  <Eccentric_ArtilleryDesignator.label>дистанционный артиллерийский целеуказатель</Eccentric_ArtilleryDesignator.label>
+  <Eccentric_ArtilleryDesignator.description>Компактный лазерный целеуказатель, используемый для наведения артиллерийских ударов из местных сетевых оборонительных систем.</Eccentric_ArtilleryDesignator.description>
+
+</LanguageData>

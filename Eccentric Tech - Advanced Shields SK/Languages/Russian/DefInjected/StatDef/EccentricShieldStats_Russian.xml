@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EnergyShieldMaxEnergyLoss.label>Макс. потеря энергии щита</EnergyShieldMaxEnergyLoss.label>
+  <EnergyShieldMaxEnergyLoss.description>Максимальное количество энергии, которое щит может потерять от одного попадания.</EnergyShieldMaxEnergyLoss.description>
+
+  <EnergyShieldActiveRechargeDelay.label>Задержка перезарядки активного щита</EnergyShieldActiveRechargeDelay.label>
+  <EnergyShieldActiveRechargeDelay.description>Время, через которое щит начнёт перезаряжаться после получения урона, оставаясь при этом активным.</EnergyShieldActiveRechargeDelay.description>
+
+  <EnergyShieldInactiveRechargeDelay.label>Задержка перезарядки неактивного щита</EnergyShieldInactiveRechargeDelay.label>
+  <EnergyShieldInactiveRechargeDelay.description>Время, через которое щит начнёт перезаряжаться после разрушения. Таймер сбрасывается, если носитель продолжает получать урон.</EnergyShieldInactiveRechargeDelay.description>
+
+</LanguageData>

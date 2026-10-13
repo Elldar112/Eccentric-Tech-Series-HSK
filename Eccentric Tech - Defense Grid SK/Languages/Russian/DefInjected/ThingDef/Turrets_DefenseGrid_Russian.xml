@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ========== M51 Charge Autocannon ========== -->
+  <Eccentric_Turret_M51AC.label>турель M51 с энергоавтопушкой</Eccentric_Turret_M51AC.label>
+  <Eccentric_Turret_M51AC.description>Турель Mark 51 — это корабельная двуствольная энергетическая автопушка, предназначенная для использования в качестве оружия точечной обороны на военных звёздных кораблях. Она мощная и прочная, но может быть построена только на подструктуре гравитационного корабля и требует внешнего управления через консоль оборонительной сети.\n\nПри подключении к сети снабжения она может перезаряжаться из сетевого хранилища.</Eccentric_Turret_M51AC.description>
+
+  <Eccentric_Gun_M51AC.label>M51 энергоавтопушка</Eccentric_Gun_M51AC.label>
+  <Eccentric_Gun_M51AC.description>Тяжёлая двуствольная энергетическая автопушка.</Eccentric_Gun_M51AC.description>
+
+  <!-- ========== M64 Railgun ========== -->
+  <Eccentric_Turret_M64RG.label>турель M64 с рельсотроном</Eccentric_Turret_M64RG.label>
+  <Eccentric_Turret_M64RG.description>Турель Mark 64 — это корабельный рельсотрон, предназначенный для использования в качестве лёгкого противокорабельного оружия на военных звёздных кораблях. Он мощный и прочный, но может быть построен только на подструктуре гравитационного корабля и требует внешнего управления через консоль оборонительной сети.\n\nПри подключении к сети снабжения он может перезаряжаться из сетевого хранилища.</Eccentric_Turret_M64RG.description>
+
+  <Eccentric_Gun_M64RG.label>M64 рельсотрон</Eccentric_Gun_M64RG.label>
+  <Eccentric_Gun_M64RG.description>Тяжёлый стационарный рельсотрон.</Eccentric_Gun_M64RG.description>
+
+</LanguageData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Рецепт наноткани -->
+  <Eccentric_MakeNanoweave.label>создать наноткань (x20)</Eccentric_MakeNanoweave.label>
+  <Eccentric_MakeNanoweave.description>Создать наноткань.</Eccentric_MakeNanoweave.description>
+  <Eccentric_MakeNanoweave.jobString>Создаёт наноткань.</Eccentric_MakeNanoweave.jobString>
+
+  <!-- Рецепт гекс-ячейки -->
+  <Eccentric_MakeHexCell.label>создать высокоплотную гекс-ячейку</Eccentric_MakeHexCell.label>
+  <Eccentric_MakeHexCell.description>Создать высокоплотную гекс-ячейку.</Eccentric_MakeHexCell.description>
+  <Eccentric_MakeHexCell.jobString>Создаёт высокоплотную гекс-ячейку.</Eccentric_MakeHexCell.jobString>
+
+</LanguageData>

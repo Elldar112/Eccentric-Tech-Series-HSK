@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Нанофабрикатор -->
+  <Eccentric_DoBillsFabricator.label>изготавливать предметы</Eccentric_DoBillsFabricator.label>
+  <Eccentric_DoBillsFabricator.verb>изготавливать</Eccentric_DoBillsFabricator.verb>
+  <Eccentric_DoBillsFabricator.gerund>изготавливает предметы в</Eccentric_DoBillsFabricator.gerund>
+
+  <!-- Наносборщик -->
+  <Eccentric_DoBillsAssembler.label>собирать предметы</Eccentric_DoBillsAssembler.label>
+  <Eccentric_DoBillsAssembler.verb>собирать</Eccentric_DoBillsAssembler.verb>
+  <Eccentric_DoBillsAssembler.gerund>собирает предметы в</Eccentric_DoBillsAssembler.gerund>
+
+</LanguageData>

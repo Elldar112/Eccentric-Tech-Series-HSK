@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Канал оборонительной сети -->
+  <Eccentric_DefenseConduit.label>канал оборонительной сети</Eccentric_DefenseConduit.label>
+  <Eccentric_DefenseConduit.description>Сложный канал, содержащий высокоэнергетические силовые линии и трубопроводы охлаждающей жидкости, используемые для соединения военных щитов и оружейных систем.\n\nМожет быть размещён под стенами и другими зданиями.</Eccentric_DefenseConduit.description>
+
+  <!-- Скрытый канал оборонительной сети -->
+  <Eccentric_DefenseConduitUnderground.label>скрытый канал оборонительной сети</Eccentric_DefenseConduitUnderground.label>
+  <Eccentric_DefenseConduitUnderground.description>Сложный канал, содержащий высокоэнергетические силовые линии и трубопроводы охлаждающей жидкости, используемые для соединения военных щитов и оружейных систем.\n\nЭтот канал проложен под землёй, что требует больше работы и материалов для строительства, но защищает канал от повреждений и создаёт меньше беспорядка на местности.</Eccentric_DefenseConduitUnderground.description>
+
+  <!-- Консоль оборонительной сети -->
+  <Eccentric_DefenseGridConsole.label>консоль оборонительной сети</Eccentric_DefenseGridConsole.label>
+  <Eccentric_DefenseGridConsole.description>Консоль, позволяющая напрямую управлять подключённой оборонительной сетью. Консоль должна обслуживаться оператором, чтобы можно было дистанционно указывать цели для артиллерийских ударов.</Eccentric_DefenseGridConsole.description>
+
+  <!-- Контроллер дистанционных турелей -->
+  <Eccentric_DefenseTurretController.label>контроллер дистанционных турелей</Eccentric_DefenseTurretController.label>
+  <Eccentric_DefenseTurretController.description>Интерфейс, позволяющий дистанционно управлять турелями с оператором через консоли оборонительной сети. Один колонист может управлять всеми турелями с оператором, подключёнными к сети, с одной консоли.</Eccentric_DefenseTurretController.description>
+
+</LanguageData>

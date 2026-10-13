@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_ShieldUnmanned>Можно перенастроить только при наличии оператора на консоли оборонительной сети или подключённого совместимого ИИ.</EccentricDefenseGrid_ShieldUnmanned>
+
+  <EccentricDefenseGrid_ShieldInterceptDirect>Перехват прямых снарядов</EccentricDefenseGrid_ShieldInterceptDirect>
+  <EccentricDefenseGrid_ShieldInterceptDirectDesc>Перехватывать снаряды прямой наводки: стрелы, пули, гранаты и противотанковые ракеты.</EccentricDefenseGrid_ShieldInterceptDirectDesc>
+  <EccentricDefenseGrid_ShieldInterceptOverhead>Перехват навесных снарядов</EccentricDefenseGrid_ShieldInterceptOverhead>
+  <EccentricDefenseGrid_ShieldInterceptOverheadDesc>Перехватывать снаряды навесной стрельбы: миномётные мины, артиллерийские снаряды и ракеты.</EccentricDefenseGrid_ShieldInterceptOverheadDesc>
+  <EccentricDefenseGrid_ShieldInterceptExplosive>Перехват взрывных снарядов</EccentricDefenseGrid_ShieldInterceptExplosive>
+  <EccentricDefenseGrid_ShieldInterceptExplosiveDesc>Перехватывать взрывные снаряды: гранаты, ракеты и зажигательные болты.</EccentricDefenseGrid_ShieldInterceptExplosiveDesc>
+  <EccentricDefenseGrid_ShieldInterceptNonExplosive>Перехват невзрывных снарядов</EccentricDefenseGrid_ShieldInterceptNonExplosive>
+  <EccentricDefenseGrid_ShieldInterceptNonExplosiveDesc>Перехватывать невзрывные снаряды: стрелы, пули, осколки и другие кинетические боеприпасы.</EccentricDefenseGrid_ShieldInterceptNonExplosiveDesc>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThreshold>Мин. энергия ({0}%)</EccentricDefenseGrid_ShieldInterceptEnergyThreshold>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThresholdDesc>Устанавливает минимальный запас энергии, при котором генератор будет перехватывать снаряды. Ниже этого порога генератор пропускает снаряды.</EccentricDefenseGrid_ShieldInterceptEnergyThresholdDesc>
+  <EccentricDefenseGrid_ShieldInterceptEnergyThresholdLabel>Минимальная энергия: {0}%</EccentricDefenseGrid_ShieldInterceptEnergyThresholdLabel>
+
+  <EccentricDefenseGrid_ShieldRadiusLabel>Радиус: {0}</EccentricDefenseGrid_ShieldRadiusLabel>
+  <EccentricDefenseGrid_ShieldRadiusDesc>Настройте радиус перехвата этого проектора.</EccentricDefenseGrid_ShieldRadiusDesc>
+
+  <EccentricDefenseGrid_ShieldInterceptToggle>Нажмите, чтобы включить или отключить для всех генераторов</EccentricDefenseGrid_ShieldInterceptToggle>
+
+</LanguageData>

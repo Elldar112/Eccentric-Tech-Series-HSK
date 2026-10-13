@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Генератор щита -->
+  <Eccentric_ShieldGenerator.label>генератор щита</Eccentric_ShieldGenerator.label>
+  <Eccentric_ShieldGenerator.description>Военный централизованный генератор щита, предназначенный для работы со связанными проекторами.\n\nЭто устройство не может перехватывать снаряды само по себе, но должно быть подключено к проекторам щита и конденсаторам щита через оборонительную сеть. Перехват снарядов также генерирует большое количество тепла, которое необходимо рассеивать в радиаторах.</Eccentric_ShieldGenerator.description>
+
+  <!-- Проектор щита -->
+  <Eccentric_ShieldProjector.label>проектор щита</Eccentric_ShieldProjector.label>
+  <Eccentric_ShieldProjector.description>Проектор щита, предназначенный для объединения в сеть для защиты широкой области.\n\nПроекторы щита не нуждаются в прямом питании, но должны быть подключены к оборонительной сети с активным генератором щита и конденсаторами щита. Перехват входящих снарядов также генерирует большое количество тепла, которое необходимо рассеивать в радиаторах.</Eccentric_ShieldProjector.description>
+
+  <!-- Проектор щита (широкозонный) -->
+  <Eccentric_ShieldProjectorWide.label>проектор щита (широкоэкранный)</Eccentric_ShieldProjectorWide.label>
+  <Eccentric_ShieldProjectorWide.description>Проектор щита, предназначенный для объединения в сеть для защиты широкой области.\n\nПроекторы щита не нуждаются в прямом питании, но должны быть подключены к оборонительной сети с активным генератором щита и конденсаторами щита. Перехват входящих снарядов также генерирует большое количество тепла, которое необходимо рассеивать в радиаторах.\n\nЭтот широкозонный вариант покрывает гораздо большую область, но требует собственного ядра щита.</Eccentric_ShieldProjectorWide.description>
+
+  <!-- Проектор щита (широкозонный 3x3) -->
+  <Eccentric_ShieldProjector3x3Wide.label>проектор щита (широкоэкранный 3x3)</Eccentric_ShieldProjector3x3Wide.label>
+  <Eccentric_ShieldProjector3x3Wide.description>Проектор щита, предназначенный для объединения в сеть для защиты широкой области.\n\nПроекторы щита не нуждаются в прямом питании, но должны быть подключены к оборонительной сети с активным генератором щита и конденсаторами щита. Перехват входящих снарядов также генерирует большое количество тепла, которое необходимо рассеивать в радиаторах.\n\nЭтот широкозонный вариант покрывает гораздо большую область, но требует собственного ядра щита.</Eccentric_ShieldProjector3x3Wide.description>
+
+  <!-- Конденсатор щита -->
+  <Eccentric_ShieldCapacitor.label>конденсатор щита</Eccentric_ShieldCapacitor.label>
+  <Eccentric_ShieldCapacitor.description>Высокоэнергетический конденсатор, используемый для питания сетевых генераторов щитов.\n\nОн должен быть напрямую подключён к источнику питания для зарядки и быстро разряжается без питания.</Eccentric_ShieldCapacitor.description>
+
+  <!-- Радиатор щита -->
+  <Eccentric_ShieldHeatsink.label>радиатор щита</Eccentric_ShieldHeatsink.label>
+  <Eccentric_ShieldHeatsink.description>Высокоёмкостный радиатор, используемый для рассеивания тепла от сетевых генераторов щитов.\n\nОн должен быть подключён к генератору щита через каналы оборонительной сети, чтобы принимать тепло.</Eccentric_ShieldHeatsink.description>
+
+  <!-- Консоль оборонительной сети -->
+  <Eccentric_DefenseGridConsole.label>консоль оборонительной сети</Eccentric_DefenseGridConsole.label>
+  <Eccentric_DefenseGridConsole.description>Консоль, позволяющая напрямую управлять подключённой оборонительной сетью. Консоль должна обслуживаться оператором, чтобы можно было дистанционно указывать цели для артиллерийских ударов.</Eccentric_DefenseGridConsole.description>
+
+  <!-- Контроллер турелей -->
+  <Eccentric_DefenseTurretController.label>контроллер дистанционных турелей</Eccentric_DefenseTurretController.label>
+  <Eccentric_DefenseTurretController.description>Интерфейс, позволяющий дистанционно управлять турелями с оператором через консоли оборонительной сети. Один колонист может управлять всеми турелями с оператором, подключёнными к сети, с одной консоли.</Eccentric_DefenseTurretController.description>
+
+</LanguageData>

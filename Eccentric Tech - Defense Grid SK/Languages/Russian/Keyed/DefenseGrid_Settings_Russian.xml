@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_ModName>Eccentric Tech - Defense Grid</EccentricDefenseGrid_ModName>
+
+  <EccentricDefenseGrid_ProjectorEffects>Эффекты проекторов щита</EccentricDefenseGrid_ProjectorEffects>
+  <EccentricDefenseGrid_ProjectorEffectsDesc>Определяет, когда отображаются контуры поля проекторов щита. Обратите внимание: щиты всегда активны, даже если их контуры не видны.</EccentricDefenseGrid_ProjectorEffectsDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffects>Всегда видны</EccentricDefenseGrid_ShowProjectorEffects>
+  <EccentricDefenseGrid_ShowProjectorEffectsDesc>Всегда показывать контуры поля активных проекторов щита.</EccentricDefenseGrid_ShowProjectorEffectsDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsSelected>Показывать при выборе</EccentricDefenseGrid_ShowProjectorEffectsSelected>
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedDesc>Показывать контуры поля для выбранных проекторов.</EccentricDefenseGrid_ShowProjectorEffectsSelectedDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedNetwork>Показывать при выборе сети</EccentricDefenseGrid_ShowProjectorEffectsSelectedNetwork>
+  <EccentricDefenseGrid_ShowProjectorEffectsSelectedNetworkDesc>Показывать контуры поля, когда выбрано любое здание из той же сети.</EccentricDefenseGrid_ShowProjectorEffectsSelectedNetworkDesc>
+
+  <EccentricDefenseGrid_ShowProjectorEffectsDanger>Показывать при опасности</EccentricDefenseGrid_ShowProjectorEffectsDanger>
+  <EccentricDefenseGrid_ShowProjectorEffectsDangerDesc>Показывать контуры поля, когда на текущей карте присутствует угроза.</EccentricDefenseGrid_ShowProjectorEffectsDangerDesc>
+
+  <EccentricDefenseGrid_ShowInterceptionEffects>Показывать эффекты перехвата</EccentricDefenseGrid_ShowInterceptionEffects>
+  <EccentricDefenseGrid_ShowInterceptionEffectsDesc>Показывать визуальные эффекты при перехвате снарядов щитами.</EccentricDefenseGrid_ShowInterceptionEffectsDesc>
+
+  <EccentricDefenseGrid_ShowInterceptionGrid>(Отладка) Показать сетку перехвата</EccentricDefenseGrid_ShowInterceptionGrid>
+  <EccentricDefenseGrid_ShowInterceptionGridDesc>Показывает кэшированную сетку перехвата. Обратите внимание: это не области карты, полностью защищённые перехватчиками, а область, в которой проверяются снаряды.</EccentricDefenseGrid_ShowInterceptionGridDesc>
+
+  <EccentricDefenseGrid_ShowDefenseGridStatus>Показывать окно состояния оборонительной сети</EccentricDefenseGrid_ShowDefenseGridStatus>
+  <EccentricDefenseGrid_ShowDefenseGridStatusDesc>Показывает окно состояния оборонительной сети.</EccentricDefenseGrid_ShowDefenseGridStatusDesc>
+
+  <EccentricDefenseGrid_Reset>Сброс</EccentricDefenseGrid_Reset>
+  <EccentricDefenseGrid_ResetStatusWindowPosition>Сбросить положение HUD</EccentricDefenseGrid_ResetStatusWindowPosition>
+  <EccentricDefenseGrid_ResetStatusWindowPositionDesc>Сбрасывает положение HUD оборонительной сети в центр экрана. Используйте, если он стал недоступен.</EccentricDefenseGrid_ResetStatusWindowPositionDesc>
+
+</LanguageData>

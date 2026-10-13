@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricDefenseGrid_LauncherDefaultName>Пусковая установка {0}</EccentricDefenseGrid_LauncherDefaultName>
+
+  <EccentricDefenseGrid_LauncherRename>Переименовать</EccentricDefenseGrid_LauncherRename>
+  <EccentricDefenseGrid_LauncherRenameDesc>Задать или изменить название этой пусковой установки.</EccentricDefenseGrid_LauncherRenameDesc>
+  <EccentricDefenseGrid_LauncherRenamed>Название установки изменено на {0}.</EccentricDefenseGrid_LauncherRenamed>
+
+  <EccentricDefenseGrid_OrdnanceTabName>Боеприпасы</EccentricDefenseGrid_OrdnanceTabName>
+  <EccentricDefenseGrid_OrdnanceTabSlot>Слот {0}</EccentricDefenseGrid_OrdnanceTabSlot>
+  <EccentricDefenseGrid_OrdnanceTabSlotEmpty>(Пусто)</EccentricDefenseGrid_OrdnanceTabSlotEmpty>
+  <EccentricDefenseGrid_OrdnanceTabAllSlots>Все слоты</EccentricDefenseGrid_OrdnanceTabAllSlots>
+  <EccentricDefenseGrid_OrdnanceCount>{0} ({1})</EccentricDefenseGrid_OrdnanceCount>
+  <EccentricDefenseGrid_OrdnanceSelect>(Выбрать боеприпас)</EccentricDefenseGrid_OrdnanceSelect>
+  <EccentricDefenseGrid_OrdnanceUnload>(Выгрузить боеприпас)</EccentricDefenseGrid_OrdnanceUnload>
+  <EccentricDefenseGrid_OrdnanceAutoReload>Автоперезарядка</EccentricDefenseGrid_OrdnanceAutoReload>
+
+  <EccentricDefenseGrid_OrdnanceReady>Готов к запуску</EccentricDefenseGrid_OrdnanceReady>
+  <EccentricDefenseGrid_OrdnanceInactive>Неактивен</EccentricDefenseGrid_OrdnanceInactive>
+  <EccentricDefenseGrid_OrdnanceStartingUp>Инициализация... {0} с</EccentricDefenseGrid_OrdnanceStartingUp>
+  <EccentricDefenseGrid_OrdnanceOnCooldown>Перезарядка... {0} с</EccentricDefenseGrid_OrdnanceOnCooldown>
+
+  <EccentricDefenseGrid_ConfigMissingOrdnance>Не заданы свойства боеприпаса для OrdnanceDef {0}</EccentricDefenseGrid_ConfigMissingOrdnance>
+  <EccentricDefenseGrid_ConfigMissingProjectile>Не задан снаряд в свойствах боеприпаса для OrdnanceDef {0}</EccentricDefenseGrid_ConfigMissingProjectile>
+
+  <EccentricDefenseGrid_DesignateArtillery>Целеуказание артиллерии</EccentricDefenseGrid_DesignateArtillery>
+  <EccentricDefenseGrid_DesignateArtilleryDesc>Указать цель для артиллерийского удара боеприпасами местной оборонительной сети.\n\nПравый клик — выбрать тип боеприпаса.</EccentricDefenseGrid_DesignateArtilleryDesc>
+
+  <EccentricDefenseGrid_DesignatorNotDraftedDesc>Должен быть призван.</EccentricDefenseGrid_DesignatorNotDraftedDesc>
+  <EccentricDefenseGrid_DesignatorNotConnectedDesc>Не удаётся найти местную оборонительную сеть для подключения.</EccentricDefenseGrid_DesignatorNotConnectedDesc>
+  <EccentricDefenseGrid_DesignatorNoOrdnanceDesc>В местных оборонительных сетях нет загруженных боеприпасов.</EccentricDefenseGrid_DesignatorNoOrdnanceDesc>
+  <EccentricDefenseGrid_DesignatorNoPawnDesc>Невозможно указать цель для артиллерийского удара без оператора на консоли или полевого целеуказателя.</EccentricDefenseGrid_DesignatorNoPawnDesc>
+
+  <EccentricDefenseGrid_DesignatorErrorAntiTank>Противотанковые боеприпасы могут захватывать только цели достаточного размера или плотности.</EccentricDefenseGrid_DesignatorErrorAntiTank>
+  <EccentricDefenseGrid_DesignatorErrorSensorRange>Цель вне зоны действия сенсорной башни.</EccentricDefenseGrid_DesignatorErrorSensorRange>
+
+  <EccentricDefenseGrid_DesignatorCannotConnect>Ошибка: не удалось подключиться к оборонительной сети, попробуйте ещё раз.</EccentricDefenseGrid_DesignatorCannotConnect>
+  <EccentricDefenseGrid_DesignatorInvalidOrdnance>Ошибка: выбран недопустимый тип боеприпаса.</EccentricDefenseGrid_DesignatorInvalidOrdnance>
+  <EccentricDefenseGrid_DesignatorEmptyOrdnance>Ошибка: выбранный тип боеприпаса пуст.</EccentricDefenseGrid_DesignatorEmptyOrdnance>
+  <EccentricDefenseGrid_DesignatorOrdnanceUnavailable>Ошибка: выбранный тип боеприпаса недоступен.</EccentricDefenseGrid_DesignatorOrdnanceUnavailable>
+  <EccentricDefenseGrid_DesignatorInvalidCaster>Ошибка: недопустимая пешка попыталась указать цель.</EccentricDefenseGrid_DesignatorInvalidCaster>
+  <EccentricDefenseGrid_DesignatorCooldownActive>Ошибка: выбранная пусковая установка перезаряжается.</EccentricDefenseGrid_DesignatorCooldownActive>
+  <EccentricDefenseGrid_DesignatorNoneAvailable>Ошибка: ни одна установка не смогла выстрелить.</EccentricDefenseGrid_DesignatorNoneAvailable>
+
+  <EccentricDefenseGrid_NetworkNoOrdnanceDesc>В выбранной оборонительной сети нет загруженных боеприпасов.</EccentricDefenseGrid_NetworkNoOrdnanceDesc>
+
+  <EccentricDefenseGrid_DesignationModeSingle>Одиночный</EccentricDefenseGrid_DesignationModeSingle>
+  <EccentricDefenseGrid_DesignationModeSingleDesc>Запускает один боеприпас выбранного типа с ближайшей доступной установки.</EccentricDefenseGrid_DesignationModeSingleDesc>
+  <EccentricDefenseGrid_DesignationModeCluster>Залп с одной</EccentricDefenseGrid_DesignationModeCluster>
+  <EccentricDefenseGrid_DesignationModeClusterDesc>Запускает все боеприпасы с выбранной установки.</EccentricDefenseGrid_DesignationModeClusterDesc>
+  <EccentricDefenseGrid_DesignationModeVolley>Общий залп</EccentricDefenseGrid_DesignationModeVolley>
+  <EccentricDefenseGrid_DesignationModeVolleyDesc>Запускает по одному боеприпасу выбранного типа со всех доступных установок.</EccentricDefenseGrid_DesignationModeVolleyDesc>
+
+</LanguageData>

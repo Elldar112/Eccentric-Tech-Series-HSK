@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EccentricCore_AutomatedLaunch>Автоматический запуск корабля</EccentricCore_AutomatedLaunch>
+  <EccentricCore_AutomatedLaunchDesc>Приказывает «Авроре» начать автоматический запуск корабля. Специализированные пилотные программы «Авроры» способны управлять простыми гравитационными кораблями без риска аварий.</EccentricCore_AutomatedLaunchDesc>
+  <EccentricCore_AutomatedLaunchNoConsole>Невозможно запустить: не обнаружена работающая пилотская консоль.</EccentricCore_AutomatedLaunchNoConsole>
+  <EccentricCore_AutomatedLaunchRejected>Невозможно запустить: {0}</EccentricCore_AutomatedLaunchRejected>
+
+</LanguageData>
