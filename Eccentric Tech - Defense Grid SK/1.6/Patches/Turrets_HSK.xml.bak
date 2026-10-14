@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- M51 charge autocannon turret -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_Gun_M51AC"]/modExtensions</xpath>
+		<value>
+			<modExtensions>
+			  <li Class="EccentricProjectiles.ModExtension_AmmoAlternateProjectile">
+				<alternateProjectiles>
+				  <li>
+					<ammo>Ammo_20x102mm_FMJ</ammo>
+					<projectile>Bullet_20x102mm_FMJ</projectile>
+				  </li>
+				  <li>
+					<ammo>Ammo_20x102mm_HE</ammo>
+					<projectile>Bullet_20x102mm_HE</projectile>
+				  </li>
+				  <li>
+					<ammo>Ammo_20x102mm_Incendiary</ammo>
+					<projectile>Bullet_20x102mm_Incendiary</projectile>
+				  </li>
+				</alternateProjectiles>
+			  </li>
+			</modExtensions>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAttributeSet">
+		<xpath>Defs/ThingDef[defName="Eccentric_Base20x105mmChargeBullet"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>Ammo20x102mmBase</value>
+	</Operation>
+
+<!-- M64 railgun turret -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Eccentric_Gun_M64RG"]/modExtensions</xpath>
+		<value>
+			<modExtensions>
+			  <li Class="EccentricProjectiles.ModExtension_AmmoAlternateProjectile">
+				<alternateProjectiles>
+				  <li>
+					<ammo>AmmoRailRay</ammo>
+					<projectile>Bullet_ChargeLance</projectile>
+				  </li>
+				</alternateProjectiles>
+			  </li>
+			</modExtensions>
+		</value>
+	</Operation>
+
+</Patch>
