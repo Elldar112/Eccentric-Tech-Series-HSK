@@ -621,7 +621,7 @@
 	<!-- Shield Projector 2x2 -->
 	
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/costList</xpath>
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2Wide"]/costList</xpath>
 		<value>
 			<costList>
 				<Eccentric_HighEnergyShieldCore>1</Eccentric_HighEnergyShieldCore>
@@ -637,7 +637,7 @@
 	</Operation>	
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]</xpath>
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2Wide"]</xpath>
 		<value>
 			<stuffCategories>
 				<li>SolidMetallic</li>
@@ -647,7 +647,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2Wide"]/comps</xpath>
 		<value>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
@@ -659,14 +659,14 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
-	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2Wide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radius</xpath>
 		<value>
 			<radius>12.9</radius>
 		</value>
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
-	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector2x2Wide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
 		<value>
 			<radiusRange>8~12</radiusRange>
 		</value>
