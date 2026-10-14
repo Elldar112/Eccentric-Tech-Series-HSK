@@ -18,7 +18,7 @@
 			<Ammo_20x105mmCharged_AP>Bullet_20x105mmCharged_AP</Ammo_20x105mmCharged_AP>
 			<Ammo_20x105mmCharged_Ion>Bullet_20x105mmCharged_Ion</Ammo_20x105mmCharged_Ion>
 		</ammoTypes>
-		<similarTo>AmmoSet_ChargedHeavy</similarTo>
+		<!-- <similarTo>AmmoSet_ChargedHeavy</similarTo> -->
 	</CombatExtended.AmmoSetDef>
 
 	<!-- ==================== Ammo ========================== -->
