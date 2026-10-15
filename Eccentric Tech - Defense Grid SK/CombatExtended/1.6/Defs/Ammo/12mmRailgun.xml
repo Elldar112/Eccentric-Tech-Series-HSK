@@ -17,6 +17,14 @@
 			<Ammo_12mmRailgun_Sabot>Bullet_12mmRailgun_Sabot</Ammo_12mmRailgun_Sabot>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>RailgunSabotEcc</defName>
+		<label>Railgun sabot</label>
+		<labelShort>Sabot</labelShort>
+		<description>Uses a discarding sabot to fire an undersized projectile at higher muzzle velocities, greatly improving armor penetration.</description>
+		<advanced>true</advanced>
+	</CombatExtended.AmmoCategoryDef>
 
 	<!-- ==================== Ammo ========================== -->
 
@@ -43,7 +51,7 @@
 			<texPath>Things/Ammo/Railgun/HighCaliber</texPath>
 			<graphicClass>CombatExtended.Graphic_StackCountRanged</graphicClass>
 		</graphicData>
-		<ammoClass>RailgunSabot</ammoClass>
+		<ammoClass>RailgunSabotEcc</ammoClass>
 	</ThingDef>
 
 	<!-- ================== Projectiles ================== -->
