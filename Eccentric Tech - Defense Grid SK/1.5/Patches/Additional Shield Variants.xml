@@ -43,7 +43,7 @@
 		  <li Class="EccentricDefenseGrid.CompProperties_DefenseConduit" />
 		  <li Class="EccentricDefenseGrid.CompProperties_DefenseProjector">
 			<radius>20.9</radius>
-			<radiusRange>8~20</radiusRange>
+			<radiusRange>5~12</radiusRange>
 			<adjustableRadius>true</adjustableRadius>
 			<interceptsDirectProjectiles>true</interceptsDirectProjectiles>
 			<interceptsOverheadProjectiles>true</interceptsOverheadProjectiles>

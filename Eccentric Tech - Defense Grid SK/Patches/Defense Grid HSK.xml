@@ -347,6 +347,13 @@
 		</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseGridConsole"]</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+	</Operation>
+	
 	<!-- Remote Turret Controller -->
 	
 	<Operation Class="PatchOperationReplace">
@@ -370,6 +377,13 @@
 				<li>SolidMetallic</li>
 			</stuffCategories>
 			<costStuffCount>125</costStuffCount>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Eccentric_DefenseTurretController"]</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
 		</value>
 	</Operation>
 	
@@ -453,7 +467,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Eccentric_ShieldGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
 		<value>
-			<basePowerConsumption>12500</basePowerConsumption>
+			<basePowerConsumption>22500</basePowerConsumption>
 		</value>
 	</Operation>
 	
@@ -486,17 +500,27 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
 		<value>
-			<basePowerConsumption>4000</basePowerConsumption>
+			<basePowerConsumption>6000</basePowerConsumption>
 		</value>
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor"]/energyCapacity</xpath>
 		<value>
-			<energyCapacity>650</energyCapacity>
-			<!-- <energyGainPerHour>500</energyGainPerHour>
-			<energyDrainPerHour>2000</energyDrainPerHour>
-			<energyRechargeDelay>300</energyRechargeDelay> -->
+			<energyCapacity>1200</energyCapacity>
+			<!-- <energyGainPerHour>500</energyGainPerHour> -->
+			<!-- <energyDrainPerHour>2000</energyDrainPerHour> -->
+			<!-- <energyRechargeDelay>300</energyRechargeDelay> -->
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="Eccentric_ShieldCapacitor"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseCapacitor"]/energyDrainPerHour</xpath>
+		<value>
+			<!-- <energyCapacity>1200</energyCapacity> -->
+			<!-- <energyGainPerHour>500</energyGainPerHour> -->
+			<energyDrainPerHour>4000</energyDrainPerHour>
+			<!-- <energyRechargeDelay>300</energyRechargeDelay> -->
 		</value>
 	</Operation>
 	
@@ -528,7 +552,7 @@
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldHeatsink"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseHeatsink"]/heatCapacity</xpath>
 		<value>
-			<heatCapacity>2400</heatCapacity>
+			<heatCapacity>2000</heatCapacity>
 			<!-- <heatDrainPerHour>250</heatDrainPerHour>
 			<overheatEffects>
 			  <li>Eccentric_DefenseGridHeatDistortion</li>
@@ -586,7 +610,7 @@
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjector"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
 		<value>
-			<radiusRange>8~12</radiusRange>
+			<radiusRange>6~12</radiusRange>
 		</value>
 	</Operation>
 	
@@ -722,7 +746,7 @@
 	<Operation Class="PatchOperationReplace">
 	<xpath>Defs/ThingDef[defName="Eccentric_ShieldProjectorWide"]/comps/li[@Class="EccentricDefenseGrid.CompProperties_DefenseProjector"]/radiusRange</xpath>
 		<value>
-			<radiusRange>10~40</radiusRange>
+			<radiusRange>8~40</radiusRange>
 		</value>
 	</Operation>
 	
